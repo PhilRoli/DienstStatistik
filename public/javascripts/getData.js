@@ -1,24 +1,26 @@
 const { MongoClient } = require('mongodb');
-require('dotenv').config({ path: '../../env/.env' });
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../../env/.env') });
 
-async function main() {
-    const client = new MongoClient(process.env.MONGOURL);
+module.exports = {
+    runMain: async function main() {
+        const client = new MongoClient(process.env.MONGOURL);
 
-    try {
-        await client.connect();
-        const results = await getAllData(client);
-        if (results.length == 0) {
-            throw new Error('results has a length of 0');
+        try {
+            await client.connect();
+            const results = await getAllData(client);
+            if (results.length == 0) {
+                throw new Error('results has a length of 0');
+            }
+            logAllData(results);
+            return results;
+        } catch (e) {
+            console.log(e);
+        } finally {
+            await client.close();
         }
-        logAllData(results);
-    } catch (e) {
-        console.log(e);
-    } finally {
-        await client.close();
-    }
-}
-
-main().catch(console.errorq);
+    },
+};
 
 async function getAllData(client) {
     const cursor = client.db('rettungsgrafana').collection('data').find({});
@@ -47,3 +49,5 @@ function logAllData(results) {
         console.log('');
     });
 }
+
+// main().catch(console.errorq);
