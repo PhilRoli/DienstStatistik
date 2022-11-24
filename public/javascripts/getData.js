@@ -1,7 +1,5 @@
 const { MongoClient } = require('mongodb');
-require('dotenv').config();
-
-const client = new MongoClient(process.env.MONGOURL);
+require('dotenv').config({ path: '../../env/.env' });
 
 async function main() {
     const client = new MongoClient(process.env.MONGOURL);
