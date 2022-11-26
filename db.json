@@ -1,0 +1,1012 @@
+{
+    "Dienste": [
+        {
+            "_id": {
+                "$oid": "63586246a1d0353bcad13c7f"
+            },
+            "date": {
+                "$date": "2021-10-23T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 5,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 15,
+            "zug": "9",
+            "car": "20-322",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635862651c0848a605e8f476"
+            },
+            "date": {
+                "$date": "2021-11-01T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 7,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 9,
+            "duration": 11,
+            "zug": "5",
+            "car": "20-308",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635862812c08998a7118a0ad"
+            },
+            "date": {
+                "$date": "2021-11-06T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 6,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 7,
+            "duration": 11,
+            "zug": "Zivi",
+            "car": "20-323",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635862aa1181607afafd2d2a"
+            },
+            "date": {
+                "$date": "2021-11-19T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 0,
+            "rd": 2,
+            "na": 2,
+            "sumcalls": 2,
+            "duration": 11.5,
+            "zug": "4",
+            "car": "20-205",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635862cc9ad91d7ff58e2ab0"
+            },
+            "date": {
+                "$date": "2021-11-21T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 1,
+            "rd": 1,
+            "na": 1,
+            "sumcalls": 2,
+            "duration": 13.0,
+            "zug": "9",
+            "car": "20-205",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358630399c0d306dccc2cd1"
+            },
+            "date": {
+                "$date": "2021-11-28T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 3,
+            "rd": 1,
+            "na": 1,
+            "sumcalls": 4,
+            "duration": 12.5,
+            "zug": "11",
+            "car": "20-205",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358635061850123e31ab23d"
+            },
+            "date": {
+                "$date": "2021-12-03T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 1,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 2,
+            "duration": 12.5,
+            "zug": "1",
+            "car": "20-322",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "63586377f336890125bf6202"
+            },
+            "date": {
+                "$date": "2021-12-11T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 4,
+            "duration": 14,
+            "zug": "9",
+            "car": "20-325",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635863b04d876b50a9d4956f"
+            },
+            "date": {
+                "$date": "2021-12-12T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "RTW",
+            "kd": 3,
+            "rd": 3,
+            "na": 1,
+            "sumcalls": 6,
+            "duration": 11,
+            "zug": "9",
+            "car": "20-203",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635863f0582a76cbc2e0ce6e"
+            },
+            "date": {
+                "$date": "2021-12-19T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 2,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 2,
+            "duration": 12.5,
+            "zug": "5",
+            "car": "20-327",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "63586412c71ba46288a82842"
+            },
+            "date": {
+                "$date": "2021-12-25T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 6,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 7,
+            "duration": 14,
+            "zug": "3",
+            "car": "20-306",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "63586435d9495d1304d7b5e3"
+            },
+            "date": {
+                "$date": "2021-12-26T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 7,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 8,
+            "duration": 11,
+            "zug": "-",
+            "car": "20-306",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358645c510c88d1782009e2"
+            },
+            "date": {
+                "$date": "2021-12-31T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 2,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 13.5,
+            "zug": "8",
+            "car": "20-327",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358647e943b9101371ae0b6"
+            },
+            "date": {
+                "$date": "2022-01-01T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 10,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 10,
+            "duration": 11,
+            "zug": "-",
+            "car": "20-327",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635864d8cd9107351e4187ef"
+            },
+            "date": {
+                "$date": "2022-01-08T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 5,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 6,
+            "duration": 13.5,
+            "zug": "10",
+            "car": "20-206",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635864f296e1565ad8091fc5"
+            },
+            "date": {
+                "$date": "2022-01-09T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "RTW",
+            "kd": 4,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 11,
+            "zug": "-",
+            "car": "20-206",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635865130c9aaba984559696"
+            },
+            "date": {
+                "$date": "2022-01-14T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 4,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 10,
+            "zug": "3",
+            "car": "20-327",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358655fa22dbd7b2fe71989"
+            },
+            "date": {
+                "$date": "2022-03-11T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 4,
+            "na": 0,
+            "sumcalls": 7,
+            "duration": 12.5,
+            "zug": "2",
+            "car": "20-326",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "63586589db09c3cc1d679fc5"
+            },
+            "date": {
+                "$date": "2022-03-13T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "RTW",
+            "kd": 1,
+            "rd": 4,
+            "na": 1,
+            "sumcalls": 5,
+            "duration": 10.5,
+            "zug": "5",
+            "car": "20-206",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635865a8eb4b15f513535aef"
+            },
+            "date": {
+                "$date": "2022-03-13T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 5,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 7,
+            "duration": 12.5,
+            "zug": "1",
+            "car": "10-316",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635866060457359da205f185"
+            },
+            "date": {
+                "$date": "2022-03-20T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 0,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 3,
+            "duration": 12,
+            "zug": "9",
+            "car": "20-206",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358663dde587bbb8b2f6574"
+            },
+            "date": {
+                "$date": "2022-03-25T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 3,
+            "duration": 12.5,
+            "zug": "5",
+            "car": "20-326",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358665585b10f8aa383d0c3"
+            },
+            "date": {
+                "$date": "2022-04-06T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 1,
+            "rd": 3,
+            "na": 2,
+            "sumcalls": 4,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-206",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635866711fd1c3151a39c952"
+            },
+            "date": {
+                "$date": "2022-04-11T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 3,
+            "duration": 11.5,
+            "zug": "9",
+            "car": "20-306",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "635866980fe850487d726b51"
+            },
+            "date": {
+                "$date": "2022-04-15T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 4,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 12.5,
+            "zug": "5",
+            "car": "20-327",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635866bbfa9eee887369e704"
+            },
+            "date": {
+                "$date": "2022-04-24T10:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "AMB",
+            "kd": 2,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 2,
+            "duration": 4,
+            "zug": "AMB",
+            "car": "",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635866d58358353876924f6f"
+            },
+            "date": {
+                "$date": "2022-04-27T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 5,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-307",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635866f05f901ce58010b6b1"
+            },
+            "date": {
+                "$date": "2022-05-08T10:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "AMB",
+            "kd": 0,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 0,
+            "duration": 9.25,
+            "zug": "AMB",
+            "car": "",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "63586713e9c654266e50f71d"
+            },
+            "date": {
+                "$date": "2022-05-08T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 6,
+            "duration": 13,
+            "zug": "5",
+            "car": "20-325",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "63586783e34031c4e6fcc9cd"
+            },
+            "date": {
+                "$date": "2022-05-09T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 7,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 10,
+            "duration": 11.5,
+            "zug": "6",
+            "car": "20-322",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358679c091cd3c632e79877"
+            },
+            "date": {
+                "$date": "2022-05-17T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 4,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-306",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635867c1f72a30649ceaa8b2"
+            },
+            "date": {
+                "$date": "2022-06-08T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 0,
+            "rd": 4,
+            "na": 1,
+            "sumcalls": 4,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-206",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635867d5c29b337ce292b5b1"
+            },
+            "date": {
+                "$date": "2022-06-20T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 3,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-203",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635867ead25446a8168df893"
+            },
+            "date": {
+                "$date": "2022-07-01T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 5,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 6,
+            "duration": 12.5,
+            "zug": "5",
+            "car": "20-307",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "6358683f31860e773c2d02ac"
+            },
+            "date": {
+                "$date": "2022-07-08T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "AMB",
+            "kd": 7,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 9,
+            "duration": 15,
+            "zug": "AMB",
+            "car": "",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635868537534592dfb5dc26f"
+            },
+            "date": {
+                "$date": "2022-07-09T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "AMB",
+            "kd": 6,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 9,
+            "duration": 15,
+            "zug": "AMB",
+            "car": "",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358686d21ed6379e3e3f37c"
+            },
+            "date": {
+                "$date": "2022-07-14T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "RTW",
+            "kd": 1,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 3,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-204",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "63586881602a90eb9a2120a0"
+            },
+            "date": {
+                "$date": "2022-07-22T10:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "AMB",
+            "kd": 1,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 1,
+            "duration": 4,
+            "zug": "AMB",
+            "car": "",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6358689aa856da980774a4e6"
+            },
+            "date": {
+                "$date": "2022-07-24T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 4,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 6,
+            "duration": 12.5,
+            "zug": "5",
+            "car": "20-322",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "635868b4d09fcb0475841cc8"
+            },
+            "date": {
+                "$date": "2022-07-26T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 2,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 11.5,
+            "zug": "3",
+            "car": "20-322",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "635868ced3cc98a6dd187dee"
+            },
+            "date": {
+                "$date": "2022-07-29T10:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "RTW",
+            "kd": 0,
+            "rd": 7,
+            "na": 1,
+            "sumcalls": 7,
+            "duration": 12.5,
+            "zug": "Zivi",
+            "car": "20-206",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635868e2b35f57f2b17ea768"
+            },
+            "date": {
+                "$date": "2022-08-02T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-324",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "635868faa78e4a71873c0a0d"
+            },
+            "date": {
+                "$date": "2022-08-11T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 2,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 2,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-304",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "6358691124cae3db1f5cc3f1"
+            },
+            "date": {
+                "$date": "2022-08-27T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 2,
+            "rd": 4,
+            "na": 0,
+            "sumcalls": 6,
+            "duration": 13.5,
+            "zug": "5",
+            "car": "20-305",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "635869325a562c0b0ff696a9"
+            },
+            "date": {
+                "$date": "2022-08-28T10:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 6,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 7,
+            "duration": 11,
+            "zug": "-",
+            "car": "20-305",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63586946b155500c6b9a4e9f"
+            },
+            "date": {
+                "$date": "2022-09-24T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 6,
+            "duration": 13,
+            "zug": "9",
+            "car": "20-327",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "6358695db7e1450edf7b1455"
+            },
+            "date": {
+                "$date": "2022-09-28T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 2,
+            "na": 1,
+            "sumcalls": 5,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "10-317",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63586970a9d55539676fb48b"
+            },
+            "date": {
+                "$date": "2022-10-01T10:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "AMB",
+            "kd": 0,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 0,
+            "duration": 4,
+            "zug": "AMB",
+            "car": "",
+            "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "635869829a3808c06f890765"
+            },
+            "date": {
+                "$date": "2022-10-11T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 1,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 1,
+            "duration": 12,
+            "zug": "5",
+            "car": "20-304",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "6358699b07089d6cc65a4036"
+            },
+            "date": {
+                "$date": "2022-10-19T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "AMB",
+            "kd": 0,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 0,
+            "duration": 3.75,
+            "zug": "AMB",
+            "car": "",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "635869af6e9bd291b9bc9b93"
+            },
+            "date": {
+                "$date": "2022-10-21T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 6,
+            "rd": 1,
+            "na": 1,
+            "sumcalls": 7,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-309",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "635a90392ed8492c70640c70"
+            },
+            "date": {
+                "$date": "2022-10-26T10:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 1,
+            "rd": 3,
+            "na": 0,
+            "sumcalls": 4,
+            "duration": 11.5,
+            "zug": "9",
+            "car": "20-308",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63680be9ebce43143390ad82"
+            },
+            "date": {
+                "$date": "2022-11-05T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 5,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 5,
+            "duration": 14,
+            "zug": "5",
+            "car": "10-316",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63680bff90d4b206cb14df04"
+            },
+            "date": {
+                "$date": "2022-11-06T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 6,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 8,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "10-316",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "6373e09794389f86c12826ce"
+            },
+            "date": {
+                "$date": "2022-11-14T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 3,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 3,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "10-317",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "637a5f8a32c9ddedde07984c"
+            },
+            "date": {
+                "$date": "2022-11-20T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "RTW",
+            "kd": 5,
+            "rd": 3,
+            "na": 1,
+            "sumcalls": 8,
+            "duration": 11,
+            "zug": "9",
+            "car": "20-202",
+            "tf": false
+        }
+    ]
+}
