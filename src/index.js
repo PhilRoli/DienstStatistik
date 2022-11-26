@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './style/index.css';
 import './style/navbar.css';
 import './style/pages.css';
+import './style/dataTable.css';
 // App
 import App from './App';
 

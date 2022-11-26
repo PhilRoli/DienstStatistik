@@ -1,0 +1,43 @@
+@media (max-width: 590px) {
+    /* Hide Car if under 590px */
+    .dienst_header .car_header {
+        display: none;
+    }
+    .dienst .car {
+        display: none;
+    }
+    /* Hide KD, RD, NA if under 590px */
+    .dienst_header .kd_header {
+        display: none;
+    }
+    .dienst .kd {
+        display: none;
+    }
+    .dienst_header .rd_header {
+        display: none;
+    }
+    .dienst .rd {
+        display: none;
+    }
+    .dienst_header .na_header {
+        display: none;
+    }
+    .dienst .na {
+        display: none;
+    }
+    /* Hide TF if under 590px */
+    .dienst_header .tf_header {
+        display: none;
+    }
+    .dienst .tf {
+        display: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.dienst_table {
+    width: 100%;
+}
