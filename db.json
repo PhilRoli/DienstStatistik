@@ -1,5 +1,5 @@
 {
-    "Dienste": [
+    "dienste": [
         {
             "_id": {
                 "$oid": "63586246a1d0353bcad13c7f"
@@ -1007,6 +1007,24 @@
             "zug": "9",
             "car": "20-202",
             "tf": false
+        },
+        {
+            "_id": {
+                "$oid": "6382a12e31a9e67c1978f739"
+            },
+            "date": {
+                "$date": "2022-11-26T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "AMB",
+            "kd": 0,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 0,
+            "duration": 2,
+            "zug": "AMB",
+            "car": "",
+            "tf": true
         }
     ]
 }

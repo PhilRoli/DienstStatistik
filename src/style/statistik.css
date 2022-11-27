@@ -1,0 +1,44 @@
+@media (max-width: 590px) {
+    .displayText {
+        font-size: small;
+    }
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+}
+
+.StatistikBox {
+    flex: 1 0 25%; /* explanation below */
+    margin: 5px;
+    height: 50%;
+    background-color: lightgrey;
+    text-align: center;
+    outline: auto red;
+}
+
+.displayText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: auto green;
+    height: 25%;
+}
+
+.value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: auto blue;
+    height: 75%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

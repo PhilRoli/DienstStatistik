@@ -1,0 +1,23 @@
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 8px;
+
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+.copyright {
+    float: left;
+}
+
+.social {
+    float: right;
+    text-decoration: none;
+}
+
+.links {
+    text-decoration: none;
+    color: inherit;
+    padding-right: 10px;
+}

@@ -8,14 +8,18 @@ import './style/index.css';
 import './style/navbar.css';
 import './style/pages.css';
 import './style/dataTable.css';
+import './style/statistik.css';
+import './style/footer.css';
 // App
 import App from './App';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <App />
+            <Footer />
         </BrowserRouter>
     </React.StrictMode>
 );

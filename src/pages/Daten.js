@@ -1,7 +1,6 @@
 import Dienst from '../components/Dienst';
 
 function Daten({ data }) {
-    // console.log(data);
     return (
         <>
             <table className="dienst_table">

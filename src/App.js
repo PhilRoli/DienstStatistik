@@ -1,6 +1,7 @@
 // React
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { trackPromise } from 'react-promise-tracker';
 // Components
 import Navbar from './components/Navbar';
 // Pages
@@ -24,7 +25,7 @@ function App() {
             const dataFromServer = await fetchData();
             setDataPoints(dataFromServer);
         };
-        loadData();
+        trackPromise(loadData());
     }, []);
 
     return (
