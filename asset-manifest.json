@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DienstStatistik/static/css/main.eb9c18bb.css",
-    "main.js": "/DienstStatistik/static/js/main.0345d800.js",
+    "main.css": "/DienstStatistik/static/css/main.fccc4498.css",
+    "main.js": "/DienstStatistik/static/js/main.8d671789.js",
     "static/js/787.484ce8f5.chunk.js": "/DienstStatistik/static/js/787.484ce8f5.chunk.js",
     "index.html": "/DienstStatistik/index.html",
-    "main.eb9c18bb.css.map": "/DienstStatistik/static/css/main.eb9c18bb.css.map",
-    "main.0345d800.js.map": "/DienstStatistik/static/js/main.0345d800.js.map",
+    "main.fccc4498.css.map": "/DienstStatistik/static/css/main.fccc4498.css.map",
+    "main.8d671789.js.map": "/DienstStatistik/static/js/main.8d671789.js.map",
     "787.484ce8f5.chunk.js.map": "/DienstStatistik/static/js/787.484ce8f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb9c18bb.css",
-    "static/js/main.0345d800.js"
+    "static/css/main.fccc4498.css",
+    "static/js/main.8d671789.js"
   ]
 }
