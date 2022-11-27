@@ -1,6 +1,7 @@
 import Dienst from '../components/Dienst';
 
 function Daten({ data }) {
+    document.title = 'Daten';
     return (
         <>
             <table className="dienst_table">

@@ -3,6 +3,7 @@ import RKT from '../components/RKT';
 import AMB from '../components/AMB';
 
 function Statistik({ data }) {
+    document.title = 'Statistik';
     if (data.length === 0) {
         return (
             <div className="center">

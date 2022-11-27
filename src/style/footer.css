@@ -1,10 +1,9 @@
 footer {
     text-align: center;
-    margin-top: auto;
-    padding: 8px;
-
     width: 100%;
     border-top: 1px solid black;
+    padding: 8px;
+    font-size: small;
 }
 
 .copyright {

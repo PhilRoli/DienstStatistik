@@ -1,4 +1,5 @@
 .pages {
     margin: 1rem;
     text-align: center;
+    flex: 1;
 }
