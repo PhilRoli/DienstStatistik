@@ -1,38 +1,45 @@
-@media (max-width: 590px) {
-    .displayText {
-        font-size: small;
-    }
-}
-
 .parent {
     display: flex;
     flex-wrap: wrap;
-    height: 90vh;
+    height: auto;
+    align-content: flex-start;
+    padding: 0px;
 }
 
 .StatistikBox {
-    flex: 1 0 25%; /* explanation below */
+    flex: 1 0 15%;
     margin: 5px;
-    height: 50%;
-    background-color: lightgrey;
+    background-color: #181b1f;
     text-align: center;
-    outline: auto red;
+    /* Grafana Box */
+    border: 1px solid #ccccdc12;
+    border-radius: 3px;
+    box-shadow: none;
+    height: 258px;
+    width: 100%;
 }
 
 .displayText {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: auto green;
     height: 25%;
+    min-height: 25%;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .value {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: auto blue;
     height: 75%;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    color: white;
 }
 
 .center {
@@ -41,4 +48,25 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+@media (max-width: 590px) {
+    .displayText {
+        font-size: small;
+    }
+
+    .StatistikBox {
+        /* height: 20vh; */
+        flex: 1 0 25%;
+        width: 30vw;
+        height: 100%;
+    }
+
+    .displayText {
+        /* height: 50%; */
+    }
+
+    .value {
+        /* height: 50%; */
+    }
 }

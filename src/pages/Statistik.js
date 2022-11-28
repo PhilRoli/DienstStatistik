@@ -1,6 +1,13 @@
 import { RotatingLines } from 'react-loader-spinner';
-import RKT from '../components/RKT';
-import AMB from '../components/AMB';
+// Statistic boxes
+import RKT from '../components/statistiks/RKT';
+import AMB from '../components/statistiks/AMB';
+import Tag from '../components/statistiks/Tag';
+import Nacht from '../components/statistiks/Nacht';
+import RTW from '../components/statistiks/RTW';
+import KTW from '../components/statistiks/KTW';
+import KD from '../components/statistiks/KD';
+import RD from '../components/statistiks/RD';
 
 function Statistik({ data }) {
     document.title = 'Statistik';
@@ -13,8 +20,17 @@ function Statistik({ data }) {
     } else {
         return (
             <div className="parent">
-                <RKT data={data.filter((value) => value.type === 'RTW' || value.type === 'KTW')} />
-                <AMB data={data.filter((value) => value.type === 'AMB')} />
+                <RKT
+                    data={data.filter((value) => value.type === 'RTW' || value.type === 'KTW')}
+                    textColor={'rgb(204, 204, 220)'}
+                />
+                <AMB className="AMB" data={data.filter((value) => value.type === 'AMB')} textColor={'rgb(255, 192, 0)'} />
+                <Tag data={data.filter((value) => value.daytime === 'Tag')} textColor={'rgb(180, 198, 231)'} />
+                <Nacht data={data.filter((value) => value.daytime === 'Nacht')} textColor={'rgb(32, 55, 100)'} />
+                <KTW data={data.filter((value) => value.type === 'KTW')} textColor={'rgb(0, 176, 240)'} />
+                <RTW data={data.filter((value) => value.type === 'RTW')} textColor={'red'} />
+                <KD data={data.filter((value) => value.type === 'RTW' || value.type === 'KTW')} textColor={''} />
+                <RD data={data.filter((value) => value.type === 'RTW' || value.type === 'KTW')} textColor={''} />
             </div>
         );
     }

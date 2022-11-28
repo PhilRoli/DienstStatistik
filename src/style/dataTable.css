@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+.dienst_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 @media (max-width: 590px) {
     /* Hide Car if under 590px */
     .dienst_header .car_header {
@@ -32,13 +41,4 @@
     .dienst .tf {
         display: none;
     }
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.dienst_table {
-    width: 100%;
-    border-collapse: collapse;
 }

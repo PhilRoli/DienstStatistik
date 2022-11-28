@@ -11,6 +11,7 @@ import './style/index.css';
 import './style/navbar.css';
 import './style/pages.css';
 import './style/statistik.css';
+import './style/statTextColors.css';
 // App
 import App from './App';
 

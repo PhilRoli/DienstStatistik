@@ -18,6 +18,7 @@ body {
     align-items: stretch;
     gap: 2rem;
     padding: 0 1rem;
+    order: -1;
 }
 
 .nav ul {
