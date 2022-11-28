@@ -1025,6 +1025,24 @@
             "zug": "AMB",
             "car": "",
             "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63850658d73b5a46828480d6"
+            },
+            "date": {
+                "$date": "2022-11-27T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 4,
+            "rd": 0,
+            "na": 0,
+            "sumcalls": 4,
+            "duration": 12.5,
+            "zug": "5",
+            "car": "20-327",
+            "tf": true
         }
     ]
 }
