@@ -1,13 +1,13 @@
-# [DienstStatistik](https://philroli.github.io/DienstStatistik)
+# [DienstStatistik](https://philroli.github.io/DienstStatistik/#/)
 
 ## TODO
 
 ### Statistik
 
 - [x] Loading Icon
-- [ ] Statistiken Hinzufügen
-  - [ ] TF Stats
-  - [ ] Gesamt / Zivi (?) Stats
+- [x] Statistiken Hinzufügen
+  - [x] TF Stats
+  - [x] Zivi Stats
   - [x] RKT Stats
   - [x] AMB Stats
   - [x] Tag Stats
@@ -16,8 +16,10 @@
   - [x] KTW Stats
   - [x] KD Stats
   - [x] RD Stats
+  - [ ] Lange Dienste
+  - [ ] **?**
   ...
-- [ ] Statistiken Stylen **(WIP)**
+- [x] Statistiken Stylen
 
 ### Daten
 

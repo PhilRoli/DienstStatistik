@@ -9,6 +9,8 @@ import Favicon from './components/Favicon';
 import Home from './pages/Home';
 import Statistik from './pages/Statistik';
 import Daten from './pages/Daten';
+import Zuege from './pages/Zuege';
+import Auto from './pages/Auto';
 import Timeline from './pages/Timeline';
 import AddData from './pages/AddData';
 import Footer from './components/Footer';
@@ -39,6 +41,8 @@ function App() {
                     <Route path="/Statistik" element={<Statistik data={dataPoints} />} />
                     <Route path="/Daten" element={<Daten data={dataPoints} />} />
                     <Route path="/Timeline" element={<Timeline data={dataPoints} />} />
+                    <Route path="/Zuege" element={<Zuege />} />
+                    <Route path="/Auto" element={<Auto />} />
                     <Route path="/AddData" element={<AddData />} />
                 </Routes>
             </div>

@@ -44,6 +44,8 @@ body {
 
 .nav li:hover {
     background-color: rgb(177, 37, 28);
+
+    color: #2037647F;
 }
 
 @media (max-width: 500px) {
@@ -54,6 +56,7 @@ body {
     .nav {
         gap: 0rem;
         flex-flow: column;
+        padding: 0;
     }
 
     .nav ul {

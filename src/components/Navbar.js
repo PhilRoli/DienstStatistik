@@ -10,8 +10,10 @@ function Navbar() {
             <ul>
                 <CustomLink to="/Statistik">Statistik</CustomLink>
                 <CustomLink to="/Daten">Daten</CustomLink>
+                <CustomLink to="/Zuege">Züge</CustomLink>
+                <CustomLink to="/Auto">Auto</CustomLink>
                 <CustomLink to="/Timeline">Timeline</CustomLink>
-                <CustomLink to="/AddData">Dienst Hinzufügen</CustomLink>
+                <CustomLink to="/AddData">Hinzufügen</CustomLink>
             </ul>
         </nav>
     );

@@ -5,9 +5,10 @@
 .dienst_table {
     width: 100%;
     border-collapse: collapse;
+    border-spacing: 0px 5px;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 610px) {
     /* Hide Car if under 590px */
     .dienst_header .car_header {
         display: none;

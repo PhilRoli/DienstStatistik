@@ -212,7 +212,7 @@
             "na": 0,
             "sumcalls": 8,
             "duration": 11,
-            "zug": "-",
+            "zug": "3",
             "car": "20-306",
             "tf": false
         },
@@ -248,7 +248,7 @@
             "na": 0,
             "sumcalls": 10,
             "duration": 11,
-            "zug": "-",
+            "zug": "8",
             "car": "20-327",
             "tf": false
         },
@@ -284,7 +284,7 @@
             "na": 0,
             "sumcalls": 5,
             "duration": 11,
-            "zug": "-",
+            "zug": "10",
             "car": "20-206",
             "tf": false
         },
@@ -806,7 +806,7 @@
             "na": 0,
             "sumcalls": 7,
             "duration": 11,
-            "zug": "-",
+            "zug": "5",
             "car": "20-305",
             "tf": true
         },

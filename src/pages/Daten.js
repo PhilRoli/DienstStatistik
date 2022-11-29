@@ -16,7 +16,7 @@ function Daten({ data }) {
                     <thead className="dienst_header">
                         <tr>
                             <th className="datum_header">Datum</th>
-                            <th className="daytime_header">Schicht</th>
+                            <th className="daytime_header">Tageszeit</th>
                             <th className="type_header">Typ</th>
                             <th className="kd_header">KD</th>
                             <th className="rd_header">RD</th>
@@ -30,7 +30,10 @@ function Daten({ data }) {
                     </thead>
                     <tbody>
                         {data.map((dataPoint) => (
-                            <Dienst key={dataPoint._id['$oid']} datenPunkt={dataPoint} />
+                            <>
+                                <Dienst key={dataPoint._id['$oid']} datenPunkt={dataPoint} />
+                                <tr className="spacerRow" style={{ height: '5px' }} />
+                            </>
                         ))}
                     </tbody>
                 </table>
