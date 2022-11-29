@@ -50,7 +50,7 @@
             "na": 0,
             "sumcalls": 7,
             "duration": 11,
-            "zug": "Zivi",
+            "zug": "Tagdienst",
             "car": "20-323",
             "tf": false
         },
@@ -734,7 +734,7 @@
             "na": 1,
             "sumcalls": 7,
             "duration": 12.5,
-            "zug": "Zivi",
+            "zug": "Tagdienst",
             "car": "20-206",
             "tf": false
         },

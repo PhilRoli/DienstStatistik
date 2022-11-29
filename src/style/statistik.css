@@ -50,23 +50,150 @@
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 590px) {
+@media (max-width: 580px) {
     .displayText {
         font-size: small;
     }
 
     .StatistikBox {
-        /* height: 20vh; */
         flex: 1 0 25%;
-        width: 30vw;
-        height: 100%;
+        height: 100px;
     }
 
     .displayText {
-        /* height: 50%; */
     }
 
     .value {
-        /* height: 50%; */
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 581px) and (max-width: 680px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+        height: 150px;
+    }
+    .value {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 681px) and (max-width: 780px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+        height: 175px;
+    }
+    .value {
+        font-size: 65px;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 880px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+        height: 200px;
+    }
+    .value {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 881px) and (max-width: 980px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+        height: 225px;
+    }
+    .value {
+        font-size: 75px;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1080px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+    }
+
+    .value {
+        font-size: 80px;
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1180px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+    }
+
+    .value {
+        font-size: 85px;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1280px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+    }
+
+    .value {
+        font-size: 90px;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1380px) {
+    .StatistikBox {
+        flex: 1 0 25%;
+    }
+
+    .value {
+        font-size: 95px;
+    }
+}
+
+@media (min-width: 1381px) and (max-width: 1450px) {
+    .StatistikBox {
+        flex: 1 0 15%;
+    }
+
+    .value {
+        font-size: 75px;
+    }
+}
+
+@media (min-width: 1451px) and (max-width: 1550px) {
+    .StatistikBox {
+        flex: 1 0 15%;
+    }
+
+    .value {
+        font-size: 80px;
+    }
+}
+
+@media (min-width: 1551px) and (max-width: 1650px) {
+    .StatistikBox {
+        flex: 1 0 15%;
+    }
+
+    .value {
+        font-size: 85px;
+    }
+}
+
+@media (min-width: 1651px) and (max-width: 1735px) {
+    .StatistikBox {
+        flex: 1 0 15%;
+    }
+
+    .value {
+        font-size: 90px;
+    }
+}
+
+@media (min-width: 1736px) and (max-width: 1820px) {
+    .StatistikBox {
+        flex: 1 0 15%;
+    }
+
+    .value {
+        font-size: 95px;
     }
 }

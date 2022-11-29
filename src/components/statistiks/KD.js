@@ -9,11 +9,7 @@ function KD({ data, textColor }) {
     return (
         <>
             <StatistikBox displayText={'KD Einsätze'} value={summe} textColor={textColor} />
-            <StatistikBox
-                displayText={'Durchschnitt KDs pro Dienst'}
-                value={Math.round(summe / data.length)}
-                textColor={textColor}
-            />
+            <StatistikBox displayText={'KDs pro Dienst'} value={Math.round(summe / data.length)} textColor={textColor} />
             <StatistikBox displayText={'KDs als TF'} value={tfkds} textColor={textColor} />
         </>
     );

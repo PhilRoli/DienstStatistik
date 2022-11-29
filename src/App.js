@@ -35,11 +35,11 @@ function App() {
             <Navbar />
             <div className="pages">
                 <Routes>
-                    <Route path="/DienstStatistik/" element={<Home />} />
-                    <Route path="/DienstStatistik/Statistik" element={<Statistik data={dataPoints} />} />
-                    <Route path="/DienstStatistik/Daten" element={<Daten data={dataPoints} />} />
-                    <Route path="/DienstStatistik/Timeline" element={<Timeline data={dataPoints} />} />
-                    <Route path="/DienstStatistik/AddData" element={<AddData />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/Statistik" element={<Statistik data={dataPoints} />} />
+                    <Route path="/Daten" element={<Daten data={dataPoints} />} />
+                    <Route path="/Timeline" element={<Timeline data={dataPoints} />} />
+                    <Route path="/AddData" element={<AddData />} />
                 </Routes>
             </div>
             <Footer />

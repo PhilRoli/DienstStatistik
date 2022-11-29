@@ -4,14 +4,14 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 function Navbar() {
     return (
         <nav className="nav">
-            <Link to="/DienstStatistik/" className="site-title">
+            <Link to="/" className="site-title">
                 RK Statistik
             </Link>
             <ul>
-                <CustomLink to="/DienstStatistik/Statistik">Statistik</CustomLink>
-                <CustomLink to="/DienstStatistik/Daten">Daten</CustomLink>
-                <CustomLink to="/DienstStatistik/Timeline">Timeline</CustomLink>
-                <CustomLink to="/DienstStatistik/AddData">Dienst Hinzufügen</CustomLink>
+                <CustomLink to="/Statistik">Statistik</CustomLink>
+                <CustomLink to="/Daten">Daten</CustomLink>
+                <CustomLink to="/Timeline">Timeline</CustomLink>
+                <CustomLink to="/AddData">Dienst Hinzufügen</CustomLink>
             </ul>
         </nav>
     );

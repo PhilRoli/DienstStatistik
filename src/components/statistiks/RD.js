@@ -9,11 +9,7 @@ function RD({ data, textColor }) {
     return (
         <>
             <StatistikBox displayText={'RD Einsätze'} value={summe} textColor={textColor} />
-            <StatistikBox
-                displayText={'Durchschnitt RDs pro Dienst'}
-                value={Math.round(summe / data.length)}
-                textColor={textColor}
-            />
+            <StatistikBox displayText={'RDs pro Dienst'} value={Math.round(summe / data.length)} textColor={textColor} />
             <StatistikBox displayText={'RDs als TF'} value={tfRDs} textColor={textColor} />
         </>
     );
