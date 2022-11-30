@@ -2,7 +2,11 @@
 
 ## TODO
 
-### Statistik
+### [Home](https://philroli.github.io/DienstStatistik/#/)
+
+- [ ] Homepage einfügen
+
+### [Statistik](https://philroli.github.io/DienstStatistik/#/Statistik)
 
 - [x] Loading Icon
 - [x] Statistiken Hinzufügen
@@ -16,20 +20,29 @@
   - [x] KTW Stats
   - [x] KD Stats
   - [x] RD Stats
+  - [ ] NA Stats
   - [ ] Lange Dienste
-  - [ ] **?**
+  
   ...
 - [x] Statistiken Stylen
 
-### Daten
+### [Daten](https://philroli.github.io/DienstStatistik/#/Daten)
 
 - [ ] Daten Stylen
 - [ ] MongoDB einbinden
 
-### Timeline
+### [Züge](https://philroli.github.io/DienstStatistik/#/Zuege)
+
+- [ ] Züge Statistik einfügen
+
+### [Auto](https://philroli.github.io/DienstStatistik/#/Auto)
+
+- [ ] Auto Statistik einfügen
+
+### [Timeline](https://philroli.github.io/DienstStatistik/#/Timeline)
 
 - [ ] Timeline einfügen
 
-### Dienst Hinzufügen
+### [Dienst Hinzufügen](https://philroli.github.io/DienstStatistik/#/AddData)
 
 - [ ] Funktion Implementieren
