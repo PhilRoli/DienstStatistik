@@ -1,13 +1,13 @@
 import Dienst from '../components/Dienst';
-import { RotatingLines } from 'react-loader-spinner';
+import Loading from '../components/Loading';
 
 function Daten({ data }) {
     document.title = 'Daten';
     if (data.length === 0) {
         return (
-            <div className="center">
-                <RotatingLines strokeColor="rgb(218, 37, 28)" strokeWidth="3" width="100" visible={true} />
-            </div>
+            <>
+                <Loading />
+            </>
         );
     } else {
         return (

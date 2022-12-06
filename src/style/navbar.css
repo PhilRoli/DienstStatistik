@@ -48,7 +48,7 @@ body {
     color: #2037647F;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 664px) {
     .site-title {
         justify-content: center;
     }

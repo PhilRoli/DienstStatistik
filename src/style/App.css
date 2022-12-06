@@ -6,3 +6,11 @@
     background-color: rgb(17, 18, 23);
     color: white;
 }
+
+input {
+    color: white;
+}
+
+svg {
+    stroke: white;
+}

@@ -5,8 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 // CSS
 import './style/App.css';
+import './style/Calendar.css';
 import './style/dataRow.css';
 import './style/dataTable.css';
+import './style/DateRangePicker.css';
 import './style/footer.css';
 import './style/index.css';
 import './style/navbar.css';

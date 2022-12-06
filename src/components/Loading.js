@@ -4,7 +4,7 @@ function Loading() {
     return (
         <div className="center">
             <RotatingLines strokeColor="rgb(218, 37, 28)" strokeWidth="3" width="100" visible={true} />
-            <p style={{ fontSize: '25px', fontWeight: 'bolder' }}>Daten werden geladen</p>
+            <p style={{ fontSize: '25px', fontWeight: 'bolder', width: '100%' }}>Daten werden geladen</p>
         </div>
     );
 }

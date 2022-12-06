@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function Dienst({ datenPunkt }) {
     const dateObj = new Date(datenPunkt.date.$date);
     const year = dateObj.getUTCFullYear();
@@ -5,19 +7,10 @@ function Dienst({ datenPunkt }) {
     const day = ('0' + dateObj.getDate()).slice(-2);
     const datum = `${year}-${month}-${day}`;
 
+    const [isActive, setActive] = useState(false);
+
     return (
-        <tr
-            className="dienst"
-            onClick={() =>
-                navigator.clipboard.writeText(
-                    `Dienst vom ${day}.${month}.${year}\nTageszeit: ${datenPunkt.daytime}\nTour: ${
-                        datenPunkt.type
-                    }\nEinsätze: ${datenPunkt.sumcalls}\nDienstzeit: ${datenPunkt.duration}h\nZug: ${datenPunkt.zug}\nTF: ${
-                        datenPunkt.tf ? 'Ja' : 'Nein'
-                    }`
-                )
-            }
-        >
+        <tr className={isActive ? 'active_dienst' : 'dienst'} onClick={() => setActive(!isActive)}>
             <td className="datum">{datum}</td>
             <td
                 className="daytime"

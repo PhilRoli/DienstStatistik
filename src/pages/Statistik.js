@@ -12,9 +12,13 @@ import KD from '../components/statistiks/KD';
 import RD from '../components/statistiks/RD';
 import Loading from '../components/Loading';
 import Zivi from '../components/statistiks/Zivi';
+// Date Range Selector
+import React, { useState } from 'react';
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 
 function Statistik({ data }) {
     document.title = 'Statistik';
+    const [dateRange, changeDateRange] = useState([new Date(), new Date()]);
     if (data.length === 0) {
         return (
             <>
@@ -25,19 +29,29 @@ function Statistik({ data }) {
         const rktData = data.filter((value) => value.type === 'RTW' || value.type === 'KTW');
 
         return (
-            <div className="parent">
-                <TF data={rktData.filter((value) => value.tf === true)} textColor={'#b42069'} />
-                <Zivi data={data.filter((value) => value.zug === 'Zivi')} textColor={'#b4da55'} />
-                <RKT data={rktData} textColor={'rgb(204, 204, 220)'} />
+            <>
+                <div className="dateRangePicker">
+                    <DateRangePicker onChange={changeDateRange} value={dateRange} clearIcon={null} />
+                </div>
 
-                <AMB className="AMB" data={data.filter((value) => value.type === 'AMB')} textColor={'rgb(255, 192, 0)'} />
-                <Tag data={data.filter((value) => value.daytime === 'Tag')} textColor={'rgb(180, 198, 231)'} />
-                <Nacht data={data.filter((value) => value.daytime === 'Nacht')} textColor={'rgb(32, 55, 100)'} />
-                <KTW data={data.filter((value) => value.type === 'KTW')} textColor={'rgb(0, 176, 240)'} />
-                <RTW data={data.filter((value) => value.type === 'RTW')} textColor={'red'} />
-                <KD data={rktData} textColor={''} />
-                <RD data={rktData} textColor={''} />
-            </div>
+                <div className="parent">
+                    <TF data={rktData.filter((value) => value.tf === true)} textColor={'#b42069'} />
+                    <Zivi data={data.filter((value) => value.zug === 'Zivi')} textColor={'#b4da55'} />
+                    <RKT data={rktData} textColor={'rgb(204, 204, 220)'} />
+
+                    <AMB
+                        className="AMB"
+                        data={data.filter((value) => value.type === 'AMB')}
+                        textColor={'rgb(255, 192, 0)'}
+                    />
+                    <Tag data={data.filter((value) => value.daytime === 'Tag')} textColor={'rgb(180, 198, 231)'} />
+                    <Nacht data={data.filter((value) => value.daytime === 'Nacht')} textColor={'rgb(32, 55, 100)'} />
+                    <KTW data={data.filter((value) => value.type === 'KTW')} textColor={'rgb(0, 176, 240)'} />
+                    <RTW data={data.filter((value) => value.type === 'RTW')} textColor={'red'} />
+                    <KD data={rktData} textColor={''} />
+                    <RD data={rktData} textColor={''} />
+                </div>
+            </>
         );
     }
 }

@@ -8,38 +8,44 @@
     border-spacing: 0px 5px;
 }
 
-@media (max-width: 610px) {
-    /* Hide Car if under 590px */
-    .dienst_header .car_header {
+.dateRangePicker {
+    color: white;
+}
+
+@media (max-width: 640px) {
+    /* Hide Car if under 640px */
+    .car_header {
         display: none;
     }
-    .dienst .car {
+    .car {
         display: none;
     }
+
     /* Hide KD, RD, NA if under 590px */
-    .dienst_header .kd_header {
+    .kd_header {
         display: none;
     }
-    .dienst .kd {
+    .kd {
         display: none;
     }
-    .dienst_header .rd_header {
+    .rd_header {
         display: none;
     }
-    .dienst .rd {
+    .rd {
         display: none;
     }
-    .dienst_header .na_header {
+    .na_header {
         display: none;
     }
-    .dienst .na {
+    .na {
         display: none;
     }
+
     /* Hide TF if under 590px */
-    .dienst_header .tf_header {
+    .tf_header {
         display: none;
     }
-    .dienst .tf {
+    .tf {
         display: none;
     }
 }
