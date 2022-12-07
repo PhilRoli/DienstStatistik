@@ -77,6 +77,9 @@
     width: 350px;
     max-width: 100vw;
     z-index: 1;
+    inset: 100% auto auto -25% !important;
+    width: 150% !important;
+    /* margin: 0 auto !important; */
 }
 .react-daterange-picker__calendar--closed {
     display: none;

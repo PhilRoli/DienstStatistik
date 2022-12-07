@@ -1,8 +1,13 @@
 import Dienst from '../components/Dienst';
 import Loading from '../components/Loading';
+// Date Range Selector
+import React, { useState } from 'react';
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 
 function Daten({ data }) {
     document.title = 'Daten';
+    const [dateRange, changeDateRange] = useState([new Date(), new Date()]);
+
     if (data.length === 0) {
         return (
             <>
@@ -10,8 +15,27 @@ function Daten({ data }) {
             </>
         );
     } else {
+        const dataRanged = data.filter(
+            (value) => new Date(value.date.$date) > dateRange[0] && new Date(value.date.$date) < dateRange[1]
+        );
+
+        if (dataRanged.length === 0) {
+            changeDateRange([new Date(2021, 0, 1), new Date(new Date().getFullYear(), 11, 31)]);
+        }
+
         return (
             <>
+                <div className="dateRangePicker">
+                    <DateRangePicker
+                        onChange={changeDateRange}
+                        // default value start 2021 to last day current year
+                        value={dateRange}
+                        clearIcon={null}
+                        locale={'de'}
+                        minDetail={'decade'}
+                    />
+                </div>
+
                 <table className="dienst_table">
                     <thead className="dienst_header">
                         <tr>
@@ -29,7 +53,7 @@ function Daten({ data }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((dataPoint) => (
+                        {dataRanged.map((dataPoint) => (
                             <>
                                 <Dienst key={dataPoint._id['$oid']} datenPunkt={dataPoint} />
                                 <tr className="spacerRow" style={{ height: '5px' }} />

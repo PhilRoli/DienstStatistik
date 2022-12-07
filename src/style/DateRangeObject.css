@@ -1,0 +1,21 @@
+.dateRangePicker {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.dateRangePickerObject {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.quickButton {
+    height: 100%;
+}
+
+@media (max-width: 664px) {
+    .dateRangePicker {
+        justify-content: space-between;
+    }
+}
