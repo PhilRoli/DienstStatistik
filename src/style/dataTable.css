@@ -8,10 +8,6 @@
     border-spacing: 0px 5px;
 }
 
-.dateRangePicker {
-    color: white;
-}
-
 @media (max-width: 640px) {
     /* Hide Car if under 640px */
     .car_header {

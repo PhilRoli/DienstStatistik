@@ -2,11 +2,11 @@ import Dienst from '../components/Dienst';
 import Loading from '../components/Loading';
 // Date Range Selector
 import React, { useState } from 'react';
-import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import DateRangePickerDiv from '../components/DateRangePickerDiv';
 
 function Daten({ data }) {
     document.title = 'Daten';
-    const [dateRange, changeDateRange] = useState([new Date(), new Date()]);
+    const [dateRange, changeDateRange] = useState([new Date(2021, 0, 1), new Date(new Date().getFullYear(), 11, 31)]);
 
     if (data.length === 0) {
         return (
@@ -25,16 +25,7 @@ function Daten({ data }) {
 
         return (
             <>
-                <div className="dateRangePicker">
-                    <DateRangePicker
-                        onChange={changeDateRange}
-                        // default value start 2021 to last day current year
-                        value={dateRange}
-                        clearIcon={null}
-                        locale={'de'}
-                        minDetail={'decade'}
-                    />
-                </div>
+                <DateRangePickerDiv changeValue={changeDateRange} value={dateRange} />
 
                 <table className="dienst_table">
                     <thead className="dienst_header">

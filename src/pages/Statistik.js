@@ -10,14 +10,13 @@ import RTW from '../components/statistiks/RTW';
 import KTW from '../components/statistiks/KTW';
 import KD from '../components/statistiks/KD';
 import RD from '../components/statistiks/RD';
+import NA from '../components/statistiks/NA';
 import Loading from '../components/Loading';
 import Zivi from '../components/statistiks/Zivi';
+import TwentyFour from '../components/statistiks/TwentyFour';
 // Date Range Selector
 import React, { useState } from 'react';
-import DateRangePicker from '@wojtekmaj/react-daterange-picker';
-// Quick Selector
-import KalButtonJahr from '../components/KalButtonJahr';
-import KalButtonGesamt from '../components/KalButtonGesamt';
+import DateRangePickerDiv from '../components/DateRangePickerDiv';
 
 function Statistik({ data }) {
     document.title = 'Statistik';
@@ -36,25 +35,14 @@ function Statistik({ data }) {
 
         if (dataRanged.length === 0) {
             changeDateRange([new Date(2021, 0, 1), new Date(new Date().getFullYear(), 11, 31)]);
+            alert('Der angegebene Datumsbereich besitzt keine Daten');
         }
 
         const rktData = dataRanged.filter((value) => value.type === 'RTW' || value.type === 'KTW');
 
         return (
             <>
-                <div className="dateRangePicker">
-                    <KalButtonGesamt />
-                    <DateRangePicker
-                        onChange={changeDateRange}
-                        // default value start 2021 to last day current year
-                        value={dateRange}
-                        clearIcon={null}
-                        locale={'de'}
-                        minDetail={'decade'}
-                        className={'dateRangePickerObject'}
-                    />
-                    <KalButtonJahr />
-                </div>
+                <DateRangePickerDiv changeValue={changeDateRange} value={dateRange} />
 
                 <div className="parent">
                     <TF data={rktData.filter((value) => value.tf === true)} textColor={'#b42069'} />
@@ -72,9 +60,41 @@ function Statistik({ data }) {
                     <RTW data={dataRanged.filter((value) => value.type === 'RTW')} textColor={'red'} />
                     <KD data={rktData} textColor={''} />
                     <RD data={rktData} textColor={''} />
+                    <NA data={rktData} textColor={''} />
+                    <TwentyFour data={getTwentyFour(rktData)} textColor={''} />
                 </div>
             </>
         );
+    }
+}
+
+function getTwentyFour(data) {
+    let returnArray = [];
+    for (let i = 0; i < data.length - 1; i++) {
+        if (
+            checkTwoDates(new Date(data[i].date.$date), new Date(data[i + 1].date.$date)) &&
+            data[i].daytime !== data[i + 1].daytime
+        ) {
+            returnArray.push(data[i]);
+            returnArray.push(data[i + 1]);
+        }
+    }
+    return returnArray;
+}
+
+function checkTwoDates(date1, date2) {
+    const date1Added = new Date(date1.getTime() + 86400000);
+    if (
+        (date1Added.getFullYear() === date2.getFullYear() &&
+            date1Added.getMonth() === date2.getMonth() &&
+            date1Added.getDate() === date2.getDate()) ||
+        (date1.getFullYear() === date2.getFullYear() &&
+            date1.getMonth() === date2.getMonth() &&
+            date1.getDate() === date2.getDate())
+    ) {
+        return true;
+    } else {
+        return false;
     }
 }
 

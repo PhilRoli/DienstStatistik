@@ -3,6 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .dateRangePickerObject {
@@ -11,11 +13,37 @@
 }
 
 .quickButton {
-    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.quickButton button {
+    height: 29px;
+    width: 62px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border-color: white;
+    box-shadow: none;
+    cursor: pointer;
+    border: thin solid gray;
+    border-width: 1px;
 }
 
 @media (max-width: 664px) {
     .dateRangePicker {
         justify-content: space-between;
+    }
+
+    .quickButton {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .quickButton button {
+        width: 62px;
+    }
+
+    .hideMobile {
+        display: none;
     }
 }

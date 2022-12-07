@@ -74,16 +74,25 @@
     display: inherit;
 }
 .react-daterange-picker__calendar {
-    width: 350px;
     max-width: 100vw;
     z-index: 1;
-    inset: 100% auto auto -25% !important;
-    width: 150% !important;
-    /* margin: 0 auto !important; */
+    inset: 100% auto auto -52px !important;
+    width: 350px !important;
 }
 .react-daterange-picker__calendar--closed {
     display: none;
+    position: absolute;
+}
+.react-daterange-picker__calendar--open {
+    position: absolute;
 }
 .react-daterange-picker__calendar .react-calendar {
     border-width: thin;
+}
+
+@media (max-width: 664px) {
+    .react-daterange-picker__calendar {
+        inset: 100% auto auto -37px !important;
+        width: 320px !important;
+    }
 }
