@@ -3,12 +3,20 @@
 }
 
 .dienst_table {
-    width: 100%;
+    width: 35%;
+    min-width: 718px;
     border-collapse: collapse;
     border-spacing: 0px 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 755px) {
+    .dienst_table {
+        min-width: 0px;
+        width: 100%;
+    }
+
     /* Hide Car if under 640px */
     .car_header {
         display: none;

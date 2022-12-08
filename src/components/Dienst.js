@@ -49,23 +49,7 @@ function Dienst({ datenPunkt }) {
             <td className="na">{datenPunkt.na}</td>
             <td className="sumcalls">{datenPunkt.sumcalls}</td>
             <td className="duration">{datenPunkt.duration}</td>
-            <td
-                className="zug"
-                // style={{
-                //     backgroundColor:
-                //         datenPunkt.zug === '5'
-                //             ? '#C9A6E4'
-                //             : datenPunkt.zug === '-'
-                //             ? '#B4C6E7'
-                //             : datenPunkt.zug === 'Zivi'
-                //             ? '#B4C6E7'
-                //             : datenPunkt.zug === 'AMB'
-                //             ? '#FFEEB7'
-                //             : '',
-                // }}
-            >
-                {datenPunkt.zug}
-            </td>
+            <td className="zug">{datenPunkt.zug}</td>
             <td className="car">{datenPunkt.car}</td>
             <td
                 className="tf"

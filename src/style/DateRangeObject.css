@@ -29,7 +29,7 @@
     border-width: 1px;
 }
 
-@media (max-width: 664px) {
+@media (max-width: 755px) {
     .dateRangePicker {
         justify-content: space-between;
     }

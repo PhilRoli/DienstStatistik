@@ -58,10 +58,10 @@ function Statistik({ data }) {
                     <Nacht data={dataRanged.filter((value) => value.daytime === 'Nacht')} textColor={'rgb(32, 55, 100)'} />
                     <KTW data={dataRanged.filter((value) => value.type === 'KTW')} textColor={'rgb(0, 176, 240)'} />
                     <RTW data={dataRanged.filter((value) => value.type === 'RTW')} textColor={'red'} />
-                    <KD data={rktData} textColor={''} />
-                    <RD data={rktData} textColor={''} />
-                    <NA data={rktData} textColor={''} />
-                    <TwentyFour data={getTwentyFour(rktData)} textColor={''} />
+                    <KD data={rktData} textColor={'#01516e'} />
+                    <RD data={rktData} textColor={'#a30000'} />
+                    <NA data={rktData} textColor={'#850111'} />
+                    <TwentyFour data={getTwentyFour(rktData)} textColor={'#850180'} />
                 </div>
             </>
         );

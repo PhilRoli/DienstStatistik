@@ -16,7 +16,7 @@ function Daten({ data }) {
         );
     } else {
         const dataRanged = data.filter(
-            (value) => new Date(value.date.$date) > dateRange[0] && new Date(value.date.$date) < dateRange[1]
+            (value) => new Date(value.date.$date) > dateRange[0] && new Date(value.date.$date) < dateRange[1].setHours(23)
         );
 
         if (dataRanged.length === 0) {

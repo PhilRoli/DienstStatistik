@@ -20,15 +20,16 @@
   - [x] KTW Stats
   - [x] KD Stats
   - [x] RD Stats
-  - [ ] NA Stats
-  - [ ] Lange Dienste
+  - [x] NA Stats
+  - [x] Lange Dienste
   
   ...
 - [x] Statistiken Stylen
 
 ### [Daten](https://philroli.github.io/DienstStatistik/#/Daten)
 
-- [ ] Daten Stylen
+- [x] Daten Stylen
+- [ ] Filter
 - [ ] MongoDB einbinden
 
 ### [Züge](https://philroli.github.io/DienstStatistik/#/Zuege)

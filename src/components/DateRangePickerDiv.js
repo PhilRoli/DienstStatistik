@@ -7,13 +7,26 @@ function DateRangePickerDiv({ changeValue, value }) {
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth();
     const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const monday = getFirstDayOfWeek(currentDate);
+    const sunday = new Date(monday);
+    sunday.setDate(sunday.getDate() + 6);
+
     return (
         <div className="dateRangePicker">
             <QuickButton
-                text={'tmp'}
+                text={'Letzt. J'}
                 hideMobile={true}
                 changeValue={changeValue}
-                value={[new Date(2021, 0, 1), new Date(currentYear, 11, 31)]}
+                value={[new Date(currentYear - 1, 0, 1), new Date(currentYear - 1, 11, 31)]}
+            />
+            <QuickButton
+                text={'Letzt. M'}
+                hideMobile={true}
+                changeValue={changeValue}
+                value={[
+                    new Date(currentYear, currentMonth - 1, 1),
+                    new Date(currentYear, currentMonth - 1, new Date(currentYear, currentMonth - 1, 0).getDate()),
+                ]}
             />
             <QuickButton
                 text={'Gesamt'}
@@ -42,8 +55,16 @@ function DateRangePickerDiv({ changeValue, value }) {
                 changeValue={changeValue}
                 value={[new Date(currentYear, currentMonth, 1), new Date(currentYear, currentMonth, lastDay)]}
             />
+            <QuickButton text={'Woche'} hideMobile={true} changeValue={changeValue} value={[monday, sunday]} />
         </div>
     );
+}
+
+function getFirstDayOfWeek(d) {
+    const date = new Date(d);
+    const day = date.getDay();
+    const diff = date.getDate() - day + (day === 0 ? -6 : 1);
+    return new Date(date.setDate(diff));
 }
 
 export default DateRangePickerDiv;

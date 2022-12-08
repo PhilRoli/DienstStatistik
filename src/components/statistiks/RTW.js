@@ -2,8 +2,8 @@ import StatistikBox from '../StatistikBox';
 
 function RTW({ data, textColor }) {
     const dienste = data.length;
-    const time = data.map((value) => value.duration).reduce((acc, amount) => acc + amount);
-    const durchschnitt = Math.round(time / dienste);
+    const time = dienste === 0 ? 0 : data.map((value) => value.duration).reduce((acc, amount) => acc + amount);
+    const durchschnitt = dienste === 0 ? 0 : Math.round(time / dienste);
     return (
         <>
             <StatistikBox displayText={'RTW Dienste'} value={dienste} textColor={textColor} />
