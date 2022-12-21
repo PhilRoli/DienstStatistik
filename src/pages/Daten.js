@@ -3,6 +3,7 @@ import Loading from '../components/Loading';
 // Date Range Selector
 import React, { useState } from 'react';
 import DateRangePickerDiv from '../components/DateRangePickerDiv';
+import FilterPickerDiv from '../components/FilterPickerDiv';
 
 function Daten({ data }) {
     document.title = 'Daten';
@@ -26,6 +27,8 @@ function Daten({ data }) {
         return (
             <>
                 <DateRangePickerDiv changeValue={changeDateRange} value={dateRange} />
+
+                <FilterPickerDiv />
 
                 <table className="dienst_table">
                     <thead className="dienst_header">
