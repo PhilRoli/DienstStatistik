@@ -1,9 +1,9 @@
-import Dienst from '../components/Dienst';
-import Loading from '../components/Loading';
+import Dienst from '../components/Daten/Dienst';
+import Loading from '../components/Base/Loading';
 // Date Range Selector
 import React, { useState } from 'react';
-import DateRangePickerDiv from '../components/DateRangePickerDiv';
-import FilterPickerDiv from '../components/FilterPickerDiv';
+import DateRangePickerDiv from '../components/Datafilters/Date/DateRangePickerDiv';
+import FilterPickerDiv from '../components/Datafilters/Filter/FilterPickerDiv';
 
 function Daten({ data }) {
     document.title = 'Daten';

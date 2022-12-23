@@ -1079,6 +1079,24 @@
             "zug": "9",
             "car": "80-201",
             "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63a630c049355ec8d8f83861"
+            },
+            "date": {
+                "$date": "2022-12-22T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 5,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 7,
+            "duration": 11.5,
+            "zug": "5",
+            "car": "20-303",
+            "tf": true
         }
     ]
 }

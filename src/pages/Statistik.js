@@ -1,22 +1,23 @@
 // Loading Spinner
 
 // Statistic boxes
-import RKT from '../components/statistiks/RKT';
-import TF from '../components/statistiks/TF';
-import AMB from '../components/statistiks/AMB';
-import Tag from '../components/statistiks/Tag';
-import Nacht from '../components/statistiks/Nacht';
-import RTW from '../components/statistiks/RTW';
-import KTW from '../components/statistiks/KTW';
-import KD from '../components/statistiks/KD';
-import RD from '../components/statistiks/RD';
-import NA from '../components/statistiks/NA';
-import Loading from '../components/Loading';
-import Zivi from '../components/statistiks/Zivi';
-import TwentyFour from '../components/statistiks/TwentyFour';
+import RKT from '../components/Statistik/statistiks/RKT';
+import TF from '../components/Statistik/statistiks/TF';
+import AMB from '../components/Statistik/statistiks/AMB';
+import Tag from '../components/Statistik/statistiks/Tag';
+import Nacht from '../components/Statistik/statistiks/Nacht';
+import RTW from '../components/Statistik/statistiks/RTW';
+import KTW from '../components/Statistik/statistiks/KTW';
+import KD from '../components/Statistik/statistiks/KD';
+import RD from '../components/Statistik/statistiks/RD';
+import NA from '../components/Statistik/statistiks/NA';
+import Zivi from '../components/Statistik/statistiks/Zivi';
+import TwentyFour from '../components/Statistik/statistiks/TwentyFour';
+// Loading
+import Loading from '../components/Base/Loading';
 // Date Range Selector
 import React, { useState } from 'react';
-import DateRangePickerDiv from '../components/DateRangePickerDiv';
+import DateRangePickerDiv from '../components/Datafilters/Date/DateRangePickerDiv';
 
 function Statistik({ data }) {
     document.title = 'Statistik';

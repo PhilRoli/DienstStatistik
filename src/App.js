@@ -3,8 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { trackPromise } from 'react-promise-tracker';
 // Components
-import Navbar from './components/Navbar';
-import Favicon from './components/Favicon';
+import Navbar from './components/Base/Navbar';
+import Favicon from './components/Base/Favicon';
+import Footer from './components/Base/Footer';
 // Pages
 import Home from './pages/Home';
 import Statistik from './pages/Statistik';
@@ -13,7 +14,6 @@ import Zuege from './pages/Zuege';
 import Auto from './pages/Auto';
 import Timeline from './pages/Timeline';
 import AddData from './pages/AddData';
-import Footer from './components/Footer';
 
 function App() {
     const [dataPoints, setDataPoints] = useState([]);
