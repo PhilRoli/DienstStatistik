@@ -7,28 +7,95 @@ import FilterPickerDiv from '../components/Datafilters/Filter/FilterPickerDiv';
 
 function Daten({ data }) {
     document.title = 'Daten';
+    let filteredData = data;
+    // Date range
     const [dateRange, changeDateRange] = useState([new Date(2021, 0, 1), new Date(new Date().getFullYear(), 11, 31)]);
 
-    if (data.length === 0) {
+    // Tageszeit
+    const [tageszeit, changeTageszeit] = useState('Tageszeit');
+
+    // Typ
+    const [typ, changeTyp] = useState('Egal');
+
+    // Zug
+    const [zug, changeZug] = useState('Zug');
+
+    // Transportfuehrer
+    const [transportfuehrer, changeTransportfuehrer] = useState('Egal');
+
+    //! Reset
+    // changeTageszeit('Tageszeit')
+    // changeTyp('Typ')
+    // changeZug('Zug')
+    // changeTransportfuehrer('Egal')
+
+    if (filteredData.length === 0) {
         return (
             <>
                 <Loading />
             </>
         );
     } else {
-        const dataRanged = data.filter(
+        // Filter date
+        filteredData = data.filter(
             (value) => new Date(value.date.$date) > dateRange[0] && new Date(value.date.$date) < dateRange[1].setHours(23)
         );
 
-        if (dataRanged.length === 0) {
-            changeDateRange([new Date(2021, 0, 1), new Date(new Date().getFullYear(), 11, 31)]);
+        // Filter Tageszeit
+        tageszeit !== 'Tageszeit' && (filteredData = filteredData.filter((value) => value.daytime === tageszeit));
+
+        // Filter Type
+        typ !== 'Egal' &&
+            (typ !== 'RKT'
+                ? (filteredData = filteredData.filter((value) => value.type === typ))
+                : (filteredData = filteredData.filter((value) => value.type === 'RTW' || value.type === 'KTW')));
+
+        // Filter Zug
+        zug !== 'Zug' && (filteredData = filteredData.filter((value) => value.zug === zug));
+
+        // Filter TF
+        transportfuehrer !== 'Egal' &&
+            (transportfuehrer === 'Ja'
+                ? (filteredData = filteredData.filter((value) => value.tf === true))
+                : (filteredData = filteredData.filter((value) => value.tf === false)));
+
+        // check if data filtered != 0
+        if (filteredData.length === 0) {
+            return (
+                <>
+                    <DateRangePickerDiv changeValue={changeDateRange} value={dateRange} />
+
+                    <FilterPickerDiv
+                        changeTageszeit={changeTageszeit}
+                        changeType={changeTyp}
+                        changeZug={changeZug}
+                        changeTF={changeTransportfuehrer}
+                        tageszeit={tageszeit}
+                        type={typ}
+                        zug={zug}
+                        tf={transportfuehrer}
+                    />
+
+                    {/* //! STYLE */}
+                    <div>KEINE DATEN ANZUZEIGEN</div>
+                </>
+            );
         }
 
         return (
             <>
                 <DateRangePickerDiv changeValue={changeDateRange} value={dateRange} />
 
-                <FilterPickerDiv />
+                <FilterPickerDiv
+                    changeTageszeit={changeTageszeit}
+                    changeType={changeTyp}
+                    changeZug={changeZug}
+                    changeTF={changeTransportfuehrer}
+                    tageszeit={tageszeit}
+                    type={typ}
+                    zug={zug}
+                    tf={transportfuehrer}
+                />
 
                 <table className="dienst_table">
                     <thead className="dienst_header">
@@ -47,7 +114,7 @@ function Daten({ data }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {dataRanged.map((dataPoint) => (
+                        {filteredData.map((dataPoint) => (
                             <>
                                 <Dienst key={dataPoint._id['$oid']} datenPunkt={dataPoint} />
                                 <tr className="spacerRow" style={{ height: '5px' }} />

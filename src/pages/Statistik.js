@@ -35,8 +35,7 @@ function Statistik({ data }) {
         );
 
         if (dataRanged.length === 0) {
-            changeDateRange([new Date(2021, 0, 1), new Date(new Date().getFullYear(), 11, 31)]);
-            alert('Der angegebene Datumsbereich besitzt keine Daten');
+            //! ADD NO DATA SCREEN
         }
 
         const rktData = dataRanged.filter((value) => value.type === 'RTW' || value.type === 'KTW');
