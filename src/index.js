@@ -4,17 +4,21 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 // CSS
+// Base
 import './style/App.css';
-import './style/Calendar.css';
-import './style/dataRow.css';
-import './style/dataTable.css';
-import './style/DateRangeObject.css';
-import './style/DateRangePicker.css';
-import './style/footer.css';
 import './style/index.css';
-import './style/navbar.css';
-import './style/pages.css';
-import './style/statistik.css';
+// Pages
+import './style/pages/dataRow.css';
+import './style/pages/dataTable.css';
+import './style/pages/pages.css';
+import './style/pages/statistik.css';
+// Components
+import './style/components/Calendar.css';
+import './style/components/DateRangeObject.css';
+import './style/components/DateRangePicker.css';
+import './style/components/footer.css';
+import './style/components/navbar.css';
+import './style/components/ZugDropdown.css';
 // App
 import App from './App';
 

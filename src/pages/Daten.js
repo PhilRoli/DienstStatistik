@@ -1,5 +1,7 @@
+// Base
 import Dienst from '../components/Daten/Dienst';
 import Loading from '../components/Base/Loading';
+import NoValidData from '../components/Base/NoValidData';
 // Date Range Selector
 import React, { useState } from 'react';
 import DateRangePickerDiv from '../components/Datafilters/Date/DateRangePickerDiv';
@@ -22,12 +24,6 @@ function Daten({ data }) {
 
     // Transportfuehrer
     const [transportfuehrer, changeTransportfuehrer] = useState('Egal');
-
-    //! Reset
-    // changeTageszeit('Tageszeit')
-    // changeTyp('Typ')
-    // changeZug('Zug')
-    // changeTransportfuehrer('Egal')
 
     if (filteredData.length === 0) {
         return (
@@ -76,8 +72,7 @@ function Daten({ data }) {
                         tf={transportfuehrer}
                     />
 
-                    {/* //! STYLE */}
-                    <div>KEINE DATEN ANZUZEIGEN</div>
+                    <NoValidData />
                 </>
             );
         }

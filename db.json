@@ -1097,6 +1097,42 @@
             "zug": "5",
             "car": "20-303",
             "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63a9b8006baf454e34714e61"
+            },
+            "date": {
+                "$date": "2022-12-25T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 6,
+            "rd": 1,
+            "na": 0,
+            "sumcalls": 7,
+            "duration": 13,
+            "zug": "9",
+            "car": "10-316",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63a9b82fe2bbda83d5533140"
+            },
+            "date": {
+                "$date": "2022-12-26T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 4,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 6,
+            "duration": 8,
+            "zug": "9",
+            "car": "10-316",
+            "tf": true
         }
     ]
 }

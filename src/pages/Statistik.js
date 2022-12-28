@@ -13,8 +13,9 @@ import RD from '../components/Statistik/statistiks/RD';
 import NA from '../components/Statistik/statistiks/NA';
 import Zivi from '../components/Statistik/statistiks/Zivi';
 import TwentyFour from '../components/Statistik/statistiks/TwentyFour';
-// Loading
+// Base
 import Loading from '../components/Base/Loading';
+import NoValidData from '../components/Base/NoValidData';
 // Date Range Selector
 import React, { useState } from 'react';
 import DateRangePickerDiv from '../components/Datafilters/Date/DateRangePickerDiv';
@@ -35,7 +36,13 @@ function Statistik({ data }) {
         );
 
         if (dataRanged.length === 0) {
-            //! ADD NO DATA SCREEN
+            return (
+                <>
+                    <DateRangePickerDiv changeValue={changeDateRange} value={dateRange} />
+
+                    <NoValidData />
+                </>
+            );
         }
 
         const rktData = dataRanged.filter((value) => value.type === 'RTW' || value.type === 'KTW');
@@ -54,8 +61,8 @@ function Statistik({ data }) {
                         data={dataRanged.filter((value) => value.type === 'AMB')}
                         textColor={'rgb(255, 192, 0)'}
                     />
-                    <Tag data={dataRanged.filter((value) => value.daytime === 'Tag')} textColor={'rgb(180, 198, 231)'} />
-                    <Nacht data={dataRanged.filter((value) => value.daytime === 'Nacht')} textColor={'rgb(32, 55, 100)'} />
+                    <Tag data={rktData.filter((value) => value.daytime === 'Tag')} textColor={'rgb(180, 198, 231)'} />
+                    <Nacht data={rktData.filter((value) => value.daytime === 'Nacht')} textColor={'rgb(32, 55, 100)'} />
                     <KTW data={dataRanged.filter((value) => value.type === 'KTW')} textColor={'rgb(0, 176, 240)'} />
                     <RTW data={dataRanged.filter((value) => value.type === 'RTW')} textColor={'red'} />
                     <KD data={rktData} textColor={'#01516e'} />

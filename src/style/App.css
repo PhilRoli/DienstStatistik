@@ -14,3 +14,7 @@ input {
 svg {
     stroke: white;
 }
+
+* {
+    box-sizing: border-box;
+}
