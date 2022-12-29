@@ -19,12 +19,11 @@ function App() {
     const [dataPoints, setDataPoints] = useState([]);
 
     const fetchData = async () => {
-        // http://localhost:5000/Dienste
-        // https://dienststatistikserver.herokuapp.com/api/getAll
-        // http://localhost:4000/api/getAll
-        const response = await fetch('https://dienststatistikserver.herokuapp.com/api/getAll').catch((error) => {
-            console.error(error);
-        });
+        const response = await fetch('https://dienststatistikbackend-production.up.railway.app/api/getAll').catch(
+            (error) => {
+                console.error(error);
+            }
+        );
         const data = await response.json();
         return data;
     };
