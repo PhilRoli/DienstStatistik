@@ -19,8 +19,10 @@ function App() {
     const [dataPoints, setDataPoints] = useState([]);
 
     const fetchData = async () => {
-        // const response = await fetch('http://localhost:5000/Dienste');
-        const response = await fetch('http://localhost:4000/api/getAll').catch((error) => {
+        // http://localhost:5000/Dienste
+        // https://dienststatistikserver.herokuapp.com/api/getAll
+        // http://localhost:4000/api/getAll
+        const response = await fetch('https://dienststatistikserver.herokuapp.com/api/getAll').catch((error) => {
             console.error(error);
         });
         const data = await response.json();
