@@ -29,6 +29,7 @@ function Zugselector({ text, hideMobile, changeValue, value }) {
                     <ZugDropwdownButton value={'9'} setOpen={setOpen} changeValue={changeValue} />,
                     <ZugDropwdownButton value={'10'} setOpen={setOpen} changeValue={changeValue} />,
                     <ZugDropwdownButton value={'11'} setOpen={setOpen} changeValue={changeValue} />,
+                    <ZugDropwdownButton value={'Kolonne'} setOpen={setOpen} changeValue={changeValue} />,
                     <ZugDropwdownButton value={'Zivi'} setOpen={setOpen} changeValue={changeValue} />,
                     <ZugDropwdownButton value={'Tagdienst'} setOpen={setOpen} changeValue={changeValue} />,
                     <ZugDropwdownButton value={'Extern'} setOpen={setOpen} changeValue={changeValue} />,

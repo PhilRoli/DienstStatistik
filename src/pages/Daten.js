@@ -47,7 +47,10 @@ function Daten({ data }) {
                 : (filteredData = filteredData.filter((value) => value.type === 'RTW' || value.type === 'KTW')));
 
         // Filter Zug
-        zug !== 'Zug' && (filteredData = filteredData.filter((value) => value.zug === zug));
+        zug !== 'Zug' &&
+            (zug === 'Kolonne'
+                ? (filteredData = filterKolonne(filteredData))
+                : (filteredData = filteredData.filter((value) => value.zug === zug)));
 
         // Filter TF
         transportfuehrer !== 'Egal' &&
@@ -120,6 +123,14 @@ function Daten({ data }) {
             </>
         );
     }
+}
+
+function filterKolonne(dataset) {
+    return dataset
+        .filter((value) => value.zug !== 'Zivi')
+        .filter((value) => value.zug !== 'Tagdienst')
+        .filter((value) => value.zug !== 'Extern')
+        .filter((value) => value.zug !== 'AMB');
 }
 
 export default Daten;
