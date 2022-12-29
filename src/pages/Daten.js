@@ -34,7 +34,7 @@ function Daten({ data }) {
     } else {
         // Filter date
         filteredData = data.filter(
-            (value) => new Date(value.date.$date) > dateRange[0] && new Date(value.date.$date) < dateRange[1].setHours(23)
+            (value) => new Date(value.date) > dateRange[0] && new Date(value.date) < dateRange[1].setHours(23)
         );
 
         // Filter Tageszeit

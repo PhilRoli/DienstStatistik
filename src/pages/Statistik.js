@@ -32,7 +32,7 @@ function Statistik({ data }) {
         );
     } else {
         const dataRanged = data.filter(
-            (value) => new Date(value.date.$date) > dateRange[0] && new Date(value.date.$date) < dateRange[1]
+            (value) => new Date(value.date) > dateRange[0] && new Date(value.date) < dateRange[1]
         );
 
         if (dataRanged.length === 0) {
@@ -79,7 +79,7 @@ function getTwentyFour(data) {
     let returnArray = [];
     for (let i = 0; i < data.length - 1; i++) {
         if (
-            checkTwoDates(new Date(data[i].date.$date), new Date(data[i + 1].date.$date)) &&
+            checkTwoDates(new Date(data[i].date), new Date(data[i + 1].date)) &&
             data[i].daytime !== data[i + 1].daytime
         ) {
             returnArray.push(data[i]);
