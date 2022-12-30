@@ -101,7 +101,7 @@ function Daten({ data }) {
                             <th className="datum_header">Datum</th>
                             <th className="daytime_header">Tageszeit</th>
                             <th className="type_header">Typ</th>
-                            <th className="kd_header">KD</th>
+                            <th className="kd_header">KT</th>
                             <th className="rd_header">RD</th>
                             <th className="na_header">NA</th>
                             <th className="sumcalls_header">Summe</th>

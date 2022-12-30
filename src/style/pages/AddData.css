@@ -1,5 +1,5 @@
 .AddData {
-    /* display: flex; */
+    /*  */
 }
 
 .react-date-picker__calendar {
@@ -49,4 +49,105 @@
 
 .react-numeric-input > input {
     color: black;
+}
+
+.outerFlexAddData {
+    border: 2px solid blue;
+    padding: 5px;
+    width: 718px;
+    height: 815px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rowFlexAddData {
+    border: 2px solid green;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: calc(800px / 9);
+}
+
+.elementFlexAddData {
+    border: 2px solid orange;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+.textField {
+    width: 25%;
+}
+
+.outerConfirmField {
+    justify-content: center;
+}
+
+.confirmField {
+    width: 100%;
+}
+
+.oneElement {
+    width: 75%;
+}
+
+.twoElements {
+    width: calc(75% / 2);
+}
+
+.threeElements {
+    width: calc(75% / 3);
+}
+
+.timerangefix {
+    width: calc(calc(75%/3)*2);
+}
+
+.react-timerange-picker__wrapper {
+    display: flex;
+}
+
+@media (max-width: 755px) {
+    .AddData {
+        height: 80vh;
+    }
+
+    .outerFlexAddData {
+        width: 100%;
+        height: 100%;
+    }
+    .rowFlexAddData {
+        height: calc(100% / 9);
+    }
+
+    .elementFlexAddData {
+        height: 100%;
+    }
+
+    .textField {
+        display: none;
+    }
+
+    .oneElement {
+        width: 100%;
+    }
+
+    .twoElements {
+        width: calc(100% / 2);
+    }
+
+    .threeElements {
+        width: calc(100% / 3);
+    }
+
+    .timerangefix {
+        width: calc(calc(100%/3)*2);
+    }
+
+    /* .confirmField {
+        height: 100%;
+    } */
 }
