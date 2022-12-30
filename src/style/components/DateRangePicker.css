@@ -76,7 +76,8 @@
 .react-daterange-picker__calendar {
     max-width: 100vw;
     z-index: 1;
-    inset: 100% auto auto -52px !important;
+    /* Center Calender */
+    inset: 100% auto auto -52.435px !important;
     width: 350px !important;
 }
 .react-daterange-picker__calendar--closed {

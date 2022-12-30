@@ -1,0 +1,52 @@
+.AddData {
+    /* display: flex; */
+}
+
+.react-date-picker__calendar {
+    inset: 100% auto auto -96.97px !important;
+    width: 350px !important;
+}
+
+.DatePicker {
+    /*  */
+}
+
+.daytimePicker {
+    /*  */
+}
+
+.typePicker {
+    /*  */
+}
+
+.kdInput {
+    /*  */
+}
+
+.rdInput {
+    /*  */
+}
+
+.ndInput {
+    /*  */
+}
+
+.timeInput {
+    /*  */
+}
+
+.zugPicker {
+    /*  */
+}
+
+.carInput {
+    /*  */
+}
+
+.tfSelector {
+    /*  */
+}
+
+.react-numeric-input > input {
+    color: black;
+}

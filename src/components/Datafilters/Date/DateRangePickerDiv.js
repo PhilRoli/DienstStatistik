@@ -25,7 +25,8 @@ function DateRangePickerDiv({ changeValue, value }) {
                 changeValue={changeValue}
                 value={[
                     new Date(currentYear, currentMonth - 1, 1),
-                    new Date(currentYear, currentMonth - 1, new Date(currentYear, currentMonth - 1, 0).getDate()),
+                    new Date(currentYear, currentMonth - 1, new Date(currentYear, currentMonth - 1, 0).getDate(), -4),
+                    // -4 to ensure consitency troughout diffrent timezones
                 ]}
             />
             <QuickButton
@@ -64,7 +65,7 @@ function getFirstDayOfWeek(d) {
     const date = new Date(d);
     const day = date.getDay();
     const diff = date.getDate() - day + (day === 0 ? -6 : 1);
-    return new Date(date.setDate(diff));
+    return new Date(new Date(date.setDate(diff)).setHours(4));
 }
 
 export default DateRangePickerDiv;
