@@ -22,7 +22,7 @@ import DateRangePickerDiv from '../components/Datafilters/Date/DateRangePickerDi
 
 function Statistik({ data }) {
     document.title = 'Statistik';
-    const [dateRange, changeDateRange] = useState([new Date(2021, 0, 1), new Date(new Date().getFullYear(), 11, 31)]);
+    const [dateRange, changeDateRange] = useState([new Date(2021, 0, 1, 4), new Date(new Date().getFullYear(), 11, 31, 20)]);
 
     if (data.length === 0) {
         return (

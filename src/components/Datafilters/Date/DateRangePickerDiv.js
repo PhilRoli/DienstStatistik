@@ -54,7 +54,7 @@ function DateRangePickerDiv({ changeValue, value }) {
                 text={'Monat'}
                 hideMobile={true}
                 changeValue={changeValue}
-                value={[new Date(currentYear, currentMonth, 1), new Date(currentYear, currentMonth, lastDay)]}
+                value={[new Date(currentYear, currentMonth, 1, 4), new Date(currentYear, currentMonth, lastDay, 20)]}
             />
             <QuickButton text={'Woche'} hideMobile={true} changeValue={changeValue} value={[monday, sunday]} />
         </div>
