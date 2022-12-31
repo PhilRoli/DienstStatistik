@@ -10,8 +10,8 @@ import Footer from './components/Base/Footer';
 import Home from './pages/Home';
 import Statistik from './pages/Statistik';
 import Daten from './pages/Daten';
-import Zuege from './pages/Zuege';
-import Auto from './pages/Auto';
+import Erweitert from './pages/Erweitert';
+import Graphs from './pages/Graphs';
 import Timeline from './pages/Timeline';
 import AddData from './pages/AddData';
 
@@ -45,8 +45,8 @@ function App() {
                     <Route path="/Statistik" element={<Statistik data={dataPoints} />} />
                     <Route path="/Daten" element={<Daten data={dataPoints} />} />
                     <Route path="/Timeline" element={<Timeline data={dataPoints} />} />
-                    <Route path="/Zuege" element={<Zuege />} />
-                    <Route path="/Auto" element={<Auto />} />
+                    <Route path="/Erweitert" element={<Erweitert data={dataPoints} />} />
+                    <Route path="/Graphs" element={<Graphs data={dataPoints} />} />
                     <Route path="/AddData" element={<AddData />} />
                 </Routes>
             </div>

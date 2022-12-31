@@ -11,6 +11,8 @@
     min-width: 83px;
 }
 
+
+
 @media (max-width: 755px) {
     .dienst_table {
         min-width: 0px;

@@ -13,6 +13,7 @@ import './style/pages/dataRow.css';
 import './style/pages/dataTable.css';
 import './style/pages/pages.css';
 import './style/pages/statistik.css';
+import './style/pages/erweitert.css'
 // Components
 import './style/components/Calendar.css';
 import './style/components/DateRangeObject.css';

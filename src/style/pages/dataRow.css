@@ -5,6 +5,11 @@
     box-shadow: none;
 }
 
+.dienst > td {
+    vertical-align: middle;
+    text-align: center;
+}
+
 .active_dienst {
     background-color: #4f5153;
     border: 1px solid #ccccdc12;
