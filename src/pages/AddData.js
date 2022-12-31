@@ -15,6 +15,8 @@ function AddData() {
 
     // TODO: Add mobile check to numeric inputs
 
+    return (<div>AddData</div>)
+
     return (
         <div className="AddData">
             <div className="outerFlexAddData">
