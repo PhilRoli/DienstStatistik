@@ -27,7 +27,7 @@ function ErweitertZugBody({ daten }) {
             <tr className="spacerRow" style={{ height: '5px' }} />
             <ErweitertZug daten={daten} zug={'Zivi'} />
             <tr className="spacerRow" style={{ height: '5px' }} />
-            <ErweitertZug daten={daten} zug={'Tagdienst'} />
+            <ErweitertZug daten={daten} zug={'Tagd.'} />
             <tr className="spacerRow" style={{ height: '5px' }} />
             <ErweitertZug daten={daten} zug={'Extern'} />
             <tr className="spacerRow" style={{ height: '5px' }} />

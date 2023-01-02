@@ -17,7 +17,7 @@ function FilterPickerDiv({ changeTageszeit, changeType, changeZug, changeTF, tag
                 changeZug={changeZug}
                 changeTF={changeTF}
             />
-            <Zugselector text={'Tagdienst'} hideMobile={false} changeValue={changeZug} value={zug} />
+            <Zugselector text={'Tagd.'} hideMobile={false} changeValue={changeZug} value={zug} />
             <TFselector text={'TF: Nein'} hideMobile={false} changeValue={changeTF} value={tf} />
         </div>
     );

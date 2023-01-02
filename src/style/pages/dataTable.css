@@ -5,13 +5,8 @@
     border-spacing: 0px 5px;
     margin-left: auto;
     margin-right: auto;
+    table-layout: fixed;
 }
-
-.zug {
-    min-width: 83px;
-}
-
-
 
 @media (max-width: 755px) {
     .dienst_table {
@@ -53,5 +48,24 @@
     }
     .tf {
         display: none;
+    }
+
+    .dienst_table > .dienst_header > tr > .datum_header {
+        width: 25%;
+    }
+    .dienst_table > .dienst_header > tr > .daytime_header {
+        width: 20%;
+    }
+    .dienst_table > .dienst_header > tr > .type_header {
+        width: 15%;
+    }
+    .dienst_table > .dienst_header > tr > .sumcalls_header {
+        width: 15%;
+    }
+    .dienst_table > .dienst_header > tr > .duration_header {
+        width: 10%;
+    }
+    .dienst_table > .dienst_header > tr > .zug_header {
+        width: 15%;
     }
 }

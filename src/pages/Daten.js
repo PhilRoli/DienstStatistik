@@ -98,17 +98,17 @@ function Daten({ data }) {
                 <table className="dienst_table">
                     <thead className="dienst_header">
                         <tr>
-                            <th className="datum_header">Datum</th>
-                            <th className="daytime_header">Tageszeit</th>
-                            <th className="type_header">Typ</th>
-                            <th className="kd_header">KT</th>
-                            <th className="rd_header">RD</th>
-                            <th className="na_header">NA</th>
-                            <th className="sumcalls_header">Summe</th>
-                            <th className="duration_header">Zeit</th>
-                            <th className="zug_header">Zug</th>
-                            <th className="car_header">Auto</th>
-                            <th className="tf_header">Transportführer</th>
+                            <th className="datum_header fifteen">Datum</th>
+                            <th className="daytime_header ten">Tageszeit</th>
+                            <th className="type_header ten">Typ</th>
+                            <th className="kd_header five">KT</th>
+                            <th className="rd_header five">RD</th>
+                            <th className="na_header five">NA</th>
+                            <th className="sumcalls_header five">Summe</th>
+                            <th className="duration_header ten">Zeit</th>
+                            <th className="zug_header five">Zug</th>
+                            <th className="car_header ten">Auto</th>
+                            <th className="tf_header twenty">Transportführer</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -128,7 +128,7 @@ function Daten({ data }) {
 function filterKolonne(dataset) {
     return dataset
         .filter((value) => value.zug !== 'Zivi')
-        .filter((value) => value.zug !== 'Tagdienst')
+        .filter((value) => value.zug !== 'Tagd.')
         .filter((value) => value.zug !== 'Extern')
         .filter((value) => value.zug !== 'AMB');
 }
