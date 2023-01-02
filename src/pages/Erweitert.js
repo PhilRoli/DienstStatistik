@@ -65,7 +65,9 @@ function Erweitert({ data }) {
                             <th className="tf_header_auto">TF Dienste</th>
                         </tr>
                     </thead>
-                    <ErweitertAutoBody daten={filteredData} />
+                    <tbody>
+                        <ErweitertAutoBody daten={filteredData} />
+                    </tbody>
                 </table>
             </>
         );

@@ -36,17 +36,21 @@ function App() {
         trackPromise(loadData());
     }, []);
 
+    // Create deep copys for each page as to not change the data for other pages
+    // source: https://stackoverflow.com/questions/47624142/right-way-to-clone-objects-arrays-during-setstate-in-react
+    // JSON.parse(JSON.stringify(dataPoints))
+
     return (
         <div className="App">
             <Navbar />
             <div className="pages">
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Statistik" element={<Statistik data={dataPoints} />} />
-                    <Route path="/Daten" element={<Daten data={dataPoints} />} />
-                    <Route path="/Timeline" element={<Timeline data={dataPoints} />} />
-                    <Route path="/Erweitert" element={<Erweitert data={dataPoints} />} />
-                    <Route path="/Graphs" element={<Graphs data={dataPoints} />} />
+                    <Route path="/" element={<Home data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                    <Route path="/Statistik" element={<Statistik data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                    <Route path="/Daten" element={<Daten data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                    <Route path="/Timeline" element={<Timeline data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                    <Route path="/Erweitert" element={<Erweitert data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                    <Route path="/Graphs" element={<Graphs data={JSON.parse(JSON.stringify(dataPoints))} />} />
                     <Route path="/AddData" element={<AddData />} />
                 </Routes>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 import { useState } from 'react';
 import DatePicker from 'react-date-picker';
 import QuickButton from '../components/Datafilters/Date/QuickButton';
@@ -10,12 +11,12 @@ function AddData() {
     const [rd, changeRD] = useState(0);
     const [na, changeNA] = useState(0);
     const [duration, changeDuration] = useState(11.5);
-    const [zug, changeZug] = useState('5')
+    const [zug, changeZug] = useState('5');
     document.title = 'Dienst Hinzufügen';
 
     // TODO: Add mobile check to numeric inputs
 
-    return (<div>AddData</div>)
+    return <div>AddData</div>;
 
     return (
         <div className="AddData">
@@ -80,7 +81,7 @@ function AddData() {
                 <div className="rowFlexAddData">
                     <div className="elementFlexAddData textField">Einheit / Zug</div>
                     <div className="elementFlexAddData oneElement">
-                        <Zugselector text={'Tagdienst'} hideMobile={false} changeValue={changeZug} value={zug} />
+                        <Zugselector text={'Tagd.'} hideMobile={false} changeValue={changeZug} value={zug} />
                     </div>
                 </div>
                 <div className="rowFlexAddData">

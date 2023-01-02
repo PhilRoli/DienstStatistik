@@ -1,0 +1,50 @@
+.home_wrapper {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.home_table {
+    width: 100%;
+}
+
+.five {
+    width: 5%;
+}
+
+.ten {
+    width: 10%;
+}
+
+.fifteen {
+    width: 15%;
+}
+
+.twenty {
+    width: 20%;
+}
+
+@media (max-width: 755px) {
+    .home_table {
+        min-width: 0px;
+        width: 100%;
+    }
+
+    .home_table > .home_head > tr > .datum_header {
+        width: 25%;
+    }
+    .home_table > .home_head > tr > .daytime_header {
+        width: 20%;
+    }
+    .home_table > .home_head > tr > .type_header {
+        width: 15%;
+    }
+    .home_table > .home_head > tr > .sumcalls_header {
+        width: 15%;
+    }
+    .home_table > .home_head > tr > .duration_header {
+        width: 10%;
+    }
+    .home_table > .home_head > tr > .zug_header {
+        width: 15%;
+    }
+}
