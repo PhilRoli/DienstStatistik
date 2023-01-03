@@ -38,6 +38,7 @@ function Erweitert({ data }) {
                             <th className="zug_header_erweitert">Zug / Einheit</th>
                             <th className="dienste_header_erweitert">Dienste</th>
                             <th className="duration_header_erweitert">Stunden</th>
+                            <th className="percent_header_erweitert">Prozent</th>
                             <th className="ktw_header_erweitert">KTW</th>
                             <th className="ktw_tf_header_erweitert">KTW TF</th>
                             <th className="rtw_header_erweitert">RTW</th>

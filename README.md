@@ -29,7 +29,7 @@ Also its in german.
 
 Homepage duhh ... No clue what to put on there
 
-- [ ] Homepage einfügen
+- [x] Homepage einfügen
 
 ### [Statistik](https://philroli.github.io/DienstStatistik/#/Statistik)
 
@@ -68,9 +68,9 @@ Even more stats, this time unit and car specific
 
 ### [Graphs](https://philroli.github.io/DienstStatistik/#/Graphs)
 
-Graphs? (No clue yet)
+Graphs, probably going to change some in the future
 
-- [ ] Graphs einfügen
+- [x] Graphs einfügen
 
 ### [Timeline](https://philroli.github.io/DienstStatistik/#/Timeline)
 
