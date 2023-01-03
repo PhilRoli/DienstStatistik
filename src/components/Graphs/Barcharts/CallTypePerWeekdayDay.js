@@ -8,42 +8,49 @@ function CallTypePerWeekdayDay({ data }) {
             name: 'Montag',
             KT: getSumOfDateIndex(nightShifts, 1, 0),
             RD: getSumOfDateIndex(nightShifts, 1, 1),
+            NA: getSumOfDateIndex(nightShifts, 1, 2),
         },
         {
             name: 'Dienstag',
             KT: getSumOfDateIndex(nightShifts, 2, 0),
             RD: getSumOfDateIndex(nightShifts, 2, 1),
+            NA: getSumOfDateIndex(nightShifts, 2, 2),
         },
         {
             name: 'Mittwoch',
             KT: getSumOfDateIndex(nightShifts, 3, 0),
             RD: getSumOfDateIndex(nightShifts, 3, 1),
+            NA: getSumOfDateIndex(nightShifts, 3, 2),
         },
         {
             name: 'Donnerstag',
             KT: getSumOfDateIndex(nightShifts, 4, 0),
             RD: getSumOfDateIndex(nightShifts, 4, 1),
+            NA: getSumOfDateIndex(nightShifts, 4, 2),
         },
         {
             name: 'Freitag',
             KT: getSumOfDateIndex(nightShifts, 5, 0),
             RD: getSumOfDateIndex(nightShifts, 5, 1),
+            NA: getSumOfDateIndex(nightShifts, 5, 2),
         },
         {
             name: 'Samsatg',
             KT: getSumOfDateIndex(nightShifts, 6, 0),
             RD: getSumOfDateIndex(nightShifts, 6, 1),
+            NA: getSumOfDateIndex(nightShifts, 6, 2),
         },
         {
             name: 'Sonntag',
             KT: getSumOfDateIndex(nightShifts, 0, 0),
             RD: getSumOfDateIndex(nightShifts, 0, 1),
+            NA: getSumOfDateIndex(nightShifts, 0, 2),
         },
     ];
 
     return (
         <div className="graphElement">
-            <h2>KT / RD pro Tag</h2>
+            <h2>KT / RD / NA pro Tag</h2>
             <ResponsiveContainer width="100%" aspect={1}>
                 <BarChart
                     width={500}
@@ -63,6 +70,7 @@ function CallTypePerWeekdayDay({ data }) {
                     <Legend />
                     <Bar dataKey="KT" stackId="a" fill="#01516e" isAnimationActive={false} />
                     <Bar dataKey="RD" stackId="a" fill="#a30000" isAnimationActive={false} />
+                    <Bar dataKey="NA" stackId="a" fill="#850111" isAnimationActive={false} />
                 </BarChart>
             </ResponsiveContainer>
         </div>
@@ -75,7 +83,14 @@ function getSumOfDateIndex(data, index, selector) {
     if (dateFilterd.length === 0) {
         return 0;
     }
-    const sumCalls = dateFilterd.map((value) => (selector === 0 ? value.kd : value.rd)).reduce((val1, val2) => val1 + val2);
+    // const sumCalls = dateFilterd.map((value) => (selector === 0 ? value.rd : value.rd)).reduce((val1, val2) => val1 + val2);
+    const sumCalls =
+        selector === 0
+            ? dateFilterd.map((value) => value.kd).reduce((val1, val2) => val1 + val2)
+            : selector === 1
+            ? dateFilterd.map((value) => value.rd).reduce((val1, val2) => val1 + val2) -
+              dateFilterd.map((value) => value.na).reduce((val1, val2) => val1 + val2)
+            : dateFilterd.map((value) => value.na).reduce((val1, val2) => val1 + val2);
     return Math.round((sumCalls / dateFilterd.length + Number.EPSILON) * 100) / 100;
 }
 
