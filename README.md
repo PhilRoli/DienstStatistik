@@ -4,6 +4,9 @@ Website to display various statistics regarding my volunteer work in the EMS fie
 Not very pretty, mostly done for fun and since i'm a bit bored at the moment.
 Also its in german.
 
+> **Warning**  
+> The website css is mostly just optimized for my own devices, so if you decide to visit it, please be aware of possible css / layout errors!
+
 ---
 
 ## Made with

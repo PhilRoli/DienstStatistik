@@ -1,6 +1,7 @@
 import HomeStats from '../components/Home/HomeStats';
 import moment from 'moment/moment';
 import HomeTable from '../components/Home/HomeTable';
+import Zug5Stats from '../components/Home/Zug5Stats';
 
 function Home({ data }) {
     // Find earliest date
@@ -32,7 +33,11 @@ function Home({ data }) {
                 {Math.round(currentDate.diff(earliestDate, 'days') / data.length)} Tage
             </h3>
             <hr />
-            <HomeStats data={data} textColor={'#FFFFFF'} />
+            <div className="parent" style={{width: '100%'}}>
+                <HomeStats data={data} textColor={'#FFFFFF'} />
+                <Zug5Stats data={data} textColor={'#FFFFFF'} />
+            </div>
+            <hr />
             <b style={{ fontSize: 'x-large' }}>Letzten 5 Dienste</b>
             <HomeTable data={data} />
             <hr />
