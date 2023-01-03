@@ -13,10 +13,18 @@ function Footer() {
                     href="https://github.com/PhilRoli/DienstStatistik"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="GitHub Repository"
                 >
                     <VscGithub />
                 </a>
-                <a className="links" style={{}} href="https://twitter.com/PhilRoli" target="_blank" rel="noreferrer">
+                <a
+                    className="links"
+                    style={{}}
+                    href="https://twitter.com/PhilRoli"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="twitter.com/philroli"
+                >
                     <VscTwitter />
                 </a>
                 <a
@@ -25,10 +33,18 @@ function Footer() {
                     href="https://portal.s.roteskreuz.at/home.php"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Rot Kreuz Portal"
                 >
                     <TiPlus />
                 </a>
-                <a className="links" style={{}} href="https://diversys.at/" target="_blank" rel="noreferrer">
+                <a
+                    className="links"
+                    style={{}}
+                    href="https://diversys.at/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Dienstverfaltungssystem"
+                >
                     <FaAmbulance />
                 </a>
             </div>
