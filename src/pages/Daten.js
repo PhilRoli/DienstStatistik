@@ -100,11 +100,11 @@ function Daten({ data }) {
                         <tr>
                             <th className="datum_header fifteen">Datum</th>
                             <th className="daytime_header ten">Tageszeit</th>
-                            <th className="type_header ten">Typ</th>
+                            <th className="type_header five">Typ</th>
                             <th className="kd_header five">KT</th>
                             <th className="rd_header five">RD</th>
                             <th className="na_header five">NA</th>
-                            <th className="sumcalls_header five">Summe</th>
+                            <th className="sumcalls_header ten">Summe</th>
                             <th className="duration_header ten">Zeit</th>
                             <th className="zug_header five">Zug</th>
                             <th className="car_header ten">Auto</th>

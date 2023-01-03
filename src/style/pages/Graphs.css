@@ -1,0 +1,34 @@
+.graphGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    justify-content: center;
+}
+
+.graphGrid > div {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.grid > div::before,
+.grid > div > div {
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.grid > div > div {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 755px) {
+    .graphGrid {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
+
+@media (min-width: 1000px) {
+    .graphGrid {
+        grid-template-columns: repeat(auto-fill, 25%);
+    }
+}
