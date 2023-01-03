@@ -11,29 +11,31 @@ function DateRangePickerDiv({ changeValue, value }) {
     const sunday = new Date(monday);
     sunday.setDate(sunday.getDate() + 6);
 
+    // Hours for first date set to 4, last date to 20
+    // Ensures that all shifts for the edge days are captured
+
     return (
         <div className="dateRangePicker">
             <QuickButton
                 text={'Letzt. J'}
                 hideMobile={true}
                 changeValue={changeValue}
-                value={[new Date(currentYear - 1, 0, 1), new Date(currentYear - 1, 11, 31)]}
+                value={[new Date(currentYear - 1, 0, 1, 4), new Date(currentYear - 1, 11, 31, 20)]}
             />
             <QuickButton
                 text={'Letzt. M'}
                 hideMobile={true}
                 changeValue={changeValue}
                 value={[
-                    new Date(currentYear, currentMonth - 1, 1),
-                    new Date(currentYear, currentMonth - 1, new Date(currentYear, currentMonth - 1, 0).getDate(), -4),
-                    // -4 to ensure consitency troughout diffrent timezones
+                    currentMonth !== 0 ? new Date(currentYear, currentMonth - 1, 1, 4) : new Date(currentYear - 1, 11, 1, 4),
+                    new Date(currentYear, currentMonth - 1, new Date(currentYear, currentMonth, 0).getDate(), 20),
                 ]}
             />
             <QuickButton
                 text={'Gesamt'}
                 hideMobile={false}
                 changeValue={changeValue}
-                value={[new Date(2021, 0, 1), new Date(currentYear, 11, 31)]}
+                value={[new Date(2021, 0, 1, 4), new Date(currentYear, 11, 31, 20)]}
             />
             <DateRangePicker
                 onChange={changeValue}
@@ -48,7 +50,7 @@ function DateRangePickerDiv({ changeValue, value }) {
                 text={'Jahr'}
                 hideMobile={false}
                 changeValue={changeValue}
-                value={[new Date(currentYear, 0, 1), new Date(currentYear, 11, 31)]}
+                value={[new Date(currentYear, 0, 1, 4), new Date(currentYear, 11, 31, 20)]}
             />
             <QuickButton
                 text={'Monat'}
