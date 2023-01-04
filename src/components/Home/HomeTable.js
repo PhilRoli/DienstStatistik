@@ -27,8 +27,12 @@ function HomeTable({ data }) {
                 <tbody>
                     {sortet.map((dataPoint) => (
                         <>
-                            <Dienst key={dataPoint._id['$oid']} datenPunkt={dataPoint} />
-                            <tr className="spacerRow" style={{ height: '5px' }} />
+                            <Dienst key={`homeTable_data_${dataPoint['_id']}`} datenPunkt={dataPoint} />
+                            <tr
+                                key={`homeTable_spacer_${dataPoint['_id']}`}
+                                className="spacerRow"
+                                style={{ height: '5px' }}
+                            />
                         </>
                     ))}
                 </tbody>

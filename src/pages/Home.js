@@ -32,8 +32,12 @@ function Home({ data }) {
                 Du machst durchschnittlich einen Dienst alle{' '}
                 {Math.round(currentDate.diff(earliestDate, 'days') / data.length)} Tage
             </h3>
+            <h3>
+                Das entspricht ca {Math.round((365 / (currentDate.diff(earliestDate, 'days') / data.length) / 365) * 100)}%
+                deiner Zeit
+            </h3>
             <hr />
-            <div className="parent" style={{width: '100%'}}>
+            <div className="parent" style={{ width: '100%' }}>
                 <HomeStats data={data} textColor={'#FFFFFF'} />
                 <Zug5Stats data={data} textColor={'#FFFFFF'} />
             </div>

@@ -68,7 +68,7 @@ function TimelineMonthDays({ year, month, days, data }) {
                                             : '#181b1f',
                                 }}
                             >
-                                {}
+                                {hasData['zug'][0]}
                             </div>
                         );
                     } else {
