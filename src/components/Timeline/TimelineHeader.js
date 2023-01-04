@@ -2,9 +2,9 @@ import TimelineHeaderDays from './TimelineHeaderDays';
 
 function TimelineHeader({ year }) {
     return (
-        <div class="Header_timeline">
+        <div className="Header_timeline">
             <div>{year}</div>
-            <TimelineHeaderDays />
+            <TimelineHeaderDays year={year} />
         </div>
     );
 }

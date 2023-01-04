@@ -7,9 +7,12 @@
     grid-template-areas:
         'Header_timeline'
         'Months_timeline';
-    border: 2px solid #ccccdc12;
+    border: 3px solid #ccccdc12;
     margin: 10px;
     border-collapse: collapse;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Header_timeline {
@@ -20,7 +23,8 @@
     grid-auto-flow: row;
     grid-template-areas: 'Header_year_timeline Header_days_timeline';
     grid-area: Header_timeline;
-    border-bottom: 2px solid #ccccdc12;
+    border-bottom: 3px solid #ccccdc12;
+    background-color: #121518;
 }
 
 .TimelineHeaderDays {
@@ -33,6 +37,7 @@
 }
 
 .TimelineMonths {
+    background-color: #121518;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -67,4 +72,22 @@
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .';
+}
+
+.TimelineDay {
+    border: 1px solid #ccccdc12;
+}
+
+.rotatePhone {
+    display: none;
+}
+
+@media (max-width: 580px) {
+    .rotatePhone {
+        display: block;
+    }
+
+    .container_timeline {
+        display: none;
+    }
 }

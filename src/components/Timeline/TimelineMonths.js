@@ -1,10 +1,16 @@
 import TimelineMonth from './TimelineMonth';
 
-function TimelineMonths({ year }) {
+function TimelineMonths({ year, data }) {
     return (
         <div className="TimelineMonths">
             {[...Array(12)].map((e, i) => (
-                <TimelineMonth year={year} month={i} />
+                // Filter data for month
+                <TimelineMonth
+                    key={'month_' + year + '_' + i}
+                    year={year}
+                    month={i}
+                    data={data.filter((value) => new Date(value.date).getMonth() === i)}
+                />
             ))}
         </div>
     );

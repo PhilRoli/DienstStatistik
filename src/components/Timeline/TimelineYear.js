@@ -1,11 +1,14 @@
 import TimelineHeader from './TimelineHeader';
 import TimelineMonths from './TimelineMonths';
 
-function TimelineYear({ year }) {
+function TimelineYear({ year, data }) {
+    // Filter data for given year
+    const dataFiltered = data.filter((value) => new Date(value.date).getFullYear() === year);
+
     return (
-        <div class="container_timeline">
+        <div className="container_timeline">
             <TimelineHeader year={year} />
-            <TimelineMonths year={year} />
+            <TimelineMonths year={year} data={dataFiltered} />
         </div>
     );
 }
