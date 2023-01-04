@@ -83,3 +83,11 @@ Timeline / Calender view with every day in service marked (haven't decided yet)
 Add a data entry into the database **(WIP / Put on hold)**
 
 - [ ] Funktion Implementieren
+
+### User Porfiles and LogIn Page
+
+Add Support for multiple Users and a login page
+
+- [ ] user profiles
+- [ ] login page
+- [ ] adapt database and api

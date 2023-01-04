@@ -70,29 +70,9 @@ function ZugPie({ data }) {
         {
             name: 'Extern',
             value: data.length === 0 ? 0 : data.filter((value) => value.zug === 'Extern').length,
-            color: '#ffffff'
+            color: '#ffffff',
         },
     ];
-
-    const RADIAN = Math.PI / 180;
-    const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, name }) => {
-        const radius = innerRadius + (outerRadius - innerRadius) * 1.1;
-        const x = cx + radius * Math.cos(-midAngle * RADIAN);
-        const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-        return (
-            <text
-                x={x}
-                y={y}
-                fill="white"
-                textAnchor={x > cx ? 'start' : 'end'}
-                dominantBaseline="central"
-                fontSize={'x-small'}
-            >
-                {`${(percent * 100).toFixed(0)}%`}
-            </text>
-        );
-    };
 
     return (
         <div className="graphElement">
