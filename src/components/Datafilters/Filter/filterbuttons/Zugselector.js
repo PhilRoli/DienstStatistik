@@ -2,7 +2,7 @@ import Dropdown from '../../../Base/Dropdown';
 import { useState } from 'react';
 import ZugDropwdownButton from './ZugDropwdownButton';
 
-function Zugselector({ text, hideMobile, changeValue, value }) {
+function Zugselector({ text, hideMobile, changeValue, value, showKolonne }) {
     // Dropdown Menu
     const [open, setOpen] = useState(false);
     const handleOpen = () => {
@@ -16,25 +16,46 @@ function Zugselector({ text, hideMobile, changeValue, value }) {
             <Dropdown
                 open={open}
                 trigger={<button onClick={handleOpen}>{value}</button>}
-                menu={[
-                    <ZugDropwdownButton value={'Zug'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'1'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'2'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'3'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'4'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'5'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'6'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'7'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'8'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'9'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'10'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'11'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'Kolonne'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'Zivi'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'Tagd.'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'Extern'} setOpen={setOpen} changeValue={changeValue} />,
-                    <ZugDropwdownButton value={'AMB'} setOpen={setOpen} changeValue={changeValue} />
-                ]}
+                menu={
+                    showKolonne === true
+                        ? [
+                              <ZugDropwdownButton value={'Zug'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'1'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'2'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'3'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'4'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'5'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'6'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'7'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'8'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'9'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'10'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'11'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'Kolonne'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'Zivi'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'Tagd.'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'Extern'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'AMB'} setOpen={setOpen} changeValue={changeValue} />,
+                          ]
+                        : [
+                              <ZugDropwdownButton value={'Zug'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'1'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'2'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'3'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'4'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'5'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'6'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'7'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'8'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'9'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'10'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'11'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'Zivi'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'Tagd.'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'Extern'} setOpen={setOpen} changeValue={changeValue} />,
+                              <ZugDropwdownButton value={'AMB'} setOpen={setOpen} changeValue={changeValue} />,
+                          ]
+                }
             />
         </div>
     );
