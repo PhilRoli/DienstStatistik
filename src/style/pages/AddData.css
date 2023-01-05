@@ -1,153 +1,527 @@
-.AddData {
-    /*  */
+.container_addData {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        'Datum_addData'
+        'Daytime_addData'
+        'Type_addData'
+        'Calls_addData'
+        'Duration_addData'
+        'Zug_addData'
+        'Car_addData'
+        'TF_addData'
+        'Confirm_addData';
+    width: 100%;
+    max-width: 718px;
+    height: 820px;
+    margin: 0 auto;
+    border: 1px solid #ccccdc12;
 }
 
-.react-date-picker__calendar {
-    inset: 100% auto auto -96.97px !important;
-    width: 350px !important;
+/* Button Font Size */
+.container_addData > div > div > div > div > button {
+    font-size: x-large;
 }
 
-.DatePicker {
-    /*  */
+/* Text Font Size */
+.container_addData > div > div {
+    font-size: large;
 }
 
-.daytimePicker {
-    /*  */
+/*
+*███████████████████████████████████████████████████████████
+* _____          _                     
+* |  __ \        | |                    
+* | |  | |  __ _ | |_  _   _  _ __ ___  
+* | |  | | / _` || __|| | | || '_ ` _ \ 
+* | |__| || (_| || |_ | |_| || | | | | |
+* |_____/  \__,_| \__| \__,_||_| |_| |_|
+*███████████████████████████████████████████████████████████
+*/
+
+.Datum_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'DatumText_addData DatumInput_addData';
+    grid-area: Datum_addData;
+    border: inherit;
 }
 
-.typePicker {
-    /*  */
+.DatumText_addData {
+    grid-area: DatumText_addData;
 }
 
-.kdInput {
-    /*  */
-}
-
-.rdInput {
-    /*  */
-}
-
-.ndInput {
-    /*  */
-}
-
-.timeInput {
-    /*  */
-}
-
-.zugPicker {
-    /*  */
-}
-
-.carInput {
-    /*  */
-}
-
-.tfSelector {
-    /*  */
-}
-
-.react-numeric-input > input {
-    color: black;
-}
-
-.outerFlexAddData {
-    border: 2px solid blue;
-    padding: 5px;
-    width: 718px;
-    height: 815px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.rowFlexAddData {
-    border: 2px solid green;
-    padding: 5px;
+.DatumInput_addData {
+    grid-area: DatumInput_addData;
+    margin: auto;
+    width: 75%;
+    height: 75%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: calc(800px / 9);
-}
-
-.elementFlexAddData {
-    border: 2px solid orange;
-    padding: 5px;
-    display: flex;
-    justify-content: space-around;
-    height: 100%;
     align-items: center;
-}
-
-.textField {
-    width: 25%;
-}
-
-.outerConfirmField {
     justify-content: center;
 }
 
-.confirmField {
+.DatumInput_addData > div > div {
+    font-size: xx-large;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*  _____                 _    _                  
+* |  __ \               | |  (_)                 
+* | |  | |  __ _  _   _ | |_  _  _ __ ___    ___ 
+* | |  | | / _` || | | || __|| || '_ ` _ \  / _ \
+* | |__| || (_| || |_| || |_ | || | | | | ||  __/
+* |_____/  \__,_| \__, | \__||_||_| |_| |_| \___|
+*                  __/ |                         
+*                 |___/                          
+*███████████████████████████████████████████████████████████
+*/
+
+.Daytime_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'DaytimeText_addData DaytimeInput_addData';
+    grid-area: Daytime_addData;
+    border: inherit;
+}
+
+.DaytimeText_addData {
+    grid-area: DaytimeText_addData;
+}
+
+.DaytimeInput_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'DaytimeDay_addData DaytimeNight_addData';
+    grid-area: DaytimeInput_addData;
+}
+
+.DaytimeDay_addData {
+    grid-area: DaytimeDay_addData;
+    margin: auto 0;
+    height: 75%;
+}
+
+.DaytimeDay_addData > div {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.DaytimeDay_addData > div > button {
+    height: 100%;
     width: 100%;
 }
 
-.oneElement {
+.DaytimeNight_addData {
+    grid-area: DaytimeNight_addData;
+    margin: auto 0;
+    height: 75%;
+}
+
+.DaytimeNight_addData > div {
+    height: 100%;
     width: 75%;
+    margin: 0 auto;
 }
 
-.twoElements {
-    width: calc(75% / 2);
+.DaytimeNight_addData > div > button {
+    height: 100%;
+    width: 100%;
 }
 
-.threeElements {
-    width: calc(75% / 3);
+/*
+*███████████████████████████████████████████████████████████
+*  _______                  
+* |__   __|                 
+*    | | _   _  _ __    ___ 
+*    | || | | || '_ \  / _ \
+*    | || |_| || |_) ||  __/
+*    |_| \__, || .__/  \___|
+*         __/ || |          
+*        |___/ |_|          
+*███████████████████████████████████████████████████████████
+*/
+
+.Type_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'TypeText_addData TypeInput_addData';
+    grid-area: Type_addData;
+    border: inherit;
 }
 
-.timerangefix {
-    width: calc(calc(75%/3)*2);
+.TypeText_addData {
+    grid-area: TypeText_addData;
 }
 
-.react-timerange-picker__wrapper {
-    display: flex;
+.TypeInput_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'TypeKTW_addData TypeRTW_addData TypeAMB_addData';
+    grid-area: TypeInput_addData;
 }
 
-@media (max-width: 755px) {
-    .AddData {
-        height: 80vh;
+.TypeKTW_addData {
+    grid-area: TypeKTW_addData;
+    height: 75%;
+    margin: auto 0;
+}
+
+.TypeKTW_addData > div {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.TypeKTW_addData > div > button {
+    height: 100%;
+    width: 100%;
+}
+
+.TypeRTW_addData {
+    grid-area: TypeRTW_addData;
+    height: 75%;
+    margin: auto 0;
+}
+
+.TypeRTW_addData > div {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.TypeRTW_addData > div > button {
+    height: 100%;
+    width: 100%;
+}
+
+.TypeAMB_addData {
+    grid-area: TypeAMB_addData;
+    height: 75%;
+    margin: auto 0;
+}
+
+.TypeAMB_addData > div {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.TypeAMB_addData > div > button {
+    height: 100%;
+    width: 100%;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*   _____        _  _      
+*  / ____|      | || |     
+* | |      __ _ | || | ___ 
+* | |     / _` || || |/ __|
+* | |____| (_| || || |\__ \
+*  \_____|\__,_||_||_||___/
+*███████████████████████████████████████████████████████████
+*/
+
+.Calls_addData {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        'KT_addData'
+        'RD_addData'
+        'NA_addData';
+    grid-area: Calls_addData;
+    border: inherit;
+}
+.KT_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 'KTText_addData KTInput_addData';
+    grid-area: KT_addData;
+    border: inherit;
+}
+.KTText_addData {
+    grid-area: KTText_addData;
+    border: inherit;
+}
+.KTInput_addData {
+    grid-area: KTInput_addData;
+    border: inherit;
+}
+.RD_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 'RDText_addData RDInput_addData';
+    grid-area: RD_addData;
+    border: inherit;
+}
+.RDText_addData {
+    grid-area: RDText_addData;
+    border: inherit;
+}
+.RDInput_addData {
+    grid-area: RDInput_addData;
+    border: inherit;
+}
+.NA_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 'NAText_addData NAInput_addData';
+    grid-area: NA_addData;
+    border: inherit;
+}
+.NAText_addData {
+    grid-area: NAText_addData;
+    border: inherit;
+}
+.NAInput_addData {
+    grid-area: NAInput_addData;
+    border: inherit;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*  _____                      _    _               
+* |  __ \                    | |  (_)              
+* | |  | | _   _  _ __  __ _ | |_  _   ___   _ __  
+* | |  | || | | || '__|/ _` || __|| | / _ \ | '_ \ 
+* | |__| || |_| || |  | (_| || |_ | || (_) || | | |
+* |_____/  \__,_||_|   \__,_| \__||_| \___/ |_| |_|
+*███████████████████████████████████████████████████████████
+*/
+
+.Duration_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'DurationText_addData DurationInput_addData';
+    grid-area: Duration_addData;
+    border: inherit;
+}
+
+.DurationText_addData {
+    grid-area: DurationText_addData;
+    border: inherit;
+}
+
+.DurationInput_addData {
+    grid-area: DurationInput_addData;
+    border: inherit;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*  ______             
+* |___  /             
+*    / / _   _   __ _ 
+*   / / | | | | / _` |
+*  / /__| |_| || (_| |
+* /_____|\__,_| \__, |
+*                __/ |
+*               |___/ 
+*███████████████████████████████████████████████████████████
+*/
+
+.Zug_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'ZugText_addData ZugInput_addData';
+    grid-area: Zug_addData;
+    border: inherit;
+}
+
+.ZugText_addData {
+    grid-area: ZugText_addData;
+    border: inherit;
+}
+
+.ZugInput_addData {
+    grid-area: ZugInput_addData;
+    border: inherit;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*   _____             
+*  / ____|            
+* | |      __ _  _ __ 
+* | |     / _` || '__|
+* | |____| (_| || |   
+*  \_____|\__,_||_|   
+*███████████████████████████████████████████████████████████
+*/
+
+.Car_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'CarText_addData CarInput_addData';
+    grid-area: Car_addData;
+    border: inherit;
+}
+
+.CarText_addData {
+    grid-area: CarText_addData;
+    border: inherit;
+}
+
+.CarInput_addData {
+    grid-area: CarInput_addData;
+    border: inherit;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*  _______                                           _   
+* |__   __|                                         | |  
+*    | | _ __  __ _  _ __   ___  _ __    ___   _ __ | |_ 
+*    | || '__|/ _` || '_ \ / __|| '_ \  / _ \ | '__|| __|
+*    | || |  | (_| || | | |\__ \| |_) || (_) || |   | |_ 
+*    |_||_|   \__,_||_| |_||___/| .__/  \___/ |_|    \__|
+*                               | |                      
+*                               |_|                      
+*███████████████████████████████████████████████████████████
+*/
+
+.TF_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'TFText_addData TFInput_addData';
+    grid-area: TF_addData;
+    border: inherit;
+}
+
+.TFText_addData {
+    grid-area: TFText_addData;
+    border: inherit;
+}
+
+.TFInput_addData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 'TFno_addData TFyes_addData';
+    grid-area: TFInput_addData;
+    border: inherit;
+}
+
+.TFno_addData {
+    grid-area: TFno_addData;
+    margin: auto 0;
+    height: 75%;
+}
+
+.TFno_addData > div {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.TFno_addData > div > button {
+    height: 100%;
+    width: 100%;
+}
+
+.TFyes_addData {
+    grid-area: TFyes_addData;
+    margin: auto 0;
+    height: 75%;
+}
+
+.TFyes_addData > div {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.TFyes_addData > div > button {
+    height: 100%;
+    width: 100%;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*   _____                __  _                  
+*  / ____|              / _|(_)                 
+* | |      ___   _ __  | |_  _  _ __  _ __ ___  
+* | |     / _ \ | '_ \ |  _|| || '__|| '_ ` _ \ 
+* | |____| (_) || | | || |  | || |   | | | | | |
+*  \_____|\___/ |_| |_||_|  |_||_|   |_| |_| |_|
+*███████████████████████████████████████████████████████████
+*/
+
+.Confirm_addData {
+    justify-self: stretch;
+    align-self: stretch;
+    grid-area: Confirm_addData;
+    border: inherit;
+}
+
+.isActive {
+    background-color: #181b1f;
+}
+
+/*
+*███████████████████████████████████████████████████████████
+*  __  __         _      _  _       
+* |  \/  |       | |    (_)| |      
+* | \  / |  ___  | |__   _ | |  ___ 
+* | |\/| | / _ \ | '_ \ | || | / _ \
+* | |  | || (_) || |_) || || ||  __/
+* |_|  |_| \___/ |_.__/ |_||_| \___|
+*███████████████████████████████████████████████████████████
+*/
+
+@media (max-width: 718px) {
+    .container_addData {
+        /* height: 630px; */
     }
 
-    .outerFlexAddData {
-        width: 100%;
-        height: 100%;
-    }
-    .rowFlexAddData {
-        height: calc(100% / 9);
+    .DatumInput_addData > div > div {
+        font-size: x-large;
     }
 
-    .elementFlexAddData {
-        height: 100%;
+    .container_addData > div > div > div > div > button {
+        font-size: small;
     }
-
-    .textField {
-        display: none;
-    }
-
-    .oneElement {
-        width: 100%;
-    }
-
-    .twoElements {
-        width: calc(100% / 2);
-    }
-
-    .threeElements {
-        width: calc(100% / 3);
-    }
-
-    .timerangefix {
-        width: calc(calc(100%/3)*2);
-    }
-
-    /* .confirmField {
-        height: 100%;
-    } */
 }

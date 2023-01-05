@@ -1,7 +1,12 @@
-function QuickButton({ text, hideMobile, changeValue, value }) {
+function QuickButton({ text, hideMobile, changeValue, value, isActive }) {
     return (
         <div className={`quickButton ${hideMobile && 'hideMobile'}`}>
-            <button onClick={() => changeValue(value)}>{text}</button>
+            <button
+                style={isActive === true ? { backgroundColor: '#181b1f' } : { backgroundColor: '' }}
+                onClick={() => changeValue(value)}
+            >
+                {text}
+            </button>
         </div>
     );
 }

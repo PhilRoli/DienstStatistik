@@ -1,4 +1,3 @@
-/* eslint-disable no-unreachable */
 function TimelineMonthDays({ year, month, days, data }) {
     var hasData = false;
 
