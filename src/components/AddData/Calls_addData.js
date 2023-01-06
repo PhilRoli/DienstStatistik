@@ -8,7 +8,14 @@ function Calls_addData({ ktValue, ktData, changeKT, rdValue, rdData, changeRD, n
                     <h3>KT</h3>
                 </div>
                 <div className="KTInput_addData">
-                    <NumberInput data={ktData} changeValue={changeKT} placeholder={'0'} name={'kt'} value={ktValue} />
+                    <NumberInput
+                        data={ktData}
+                        changeValue={changeKT}
+                        placeholder={'0'}
+                        name={'kt'}
+                        value={ktValue}
+                        step={1}
+                    />
                 </div>
             </div>
             <div className="RD_addData">
@@ -16,7 +23,14 @@ function Calls_addData({ ktValue, ktData, changeKT, rdValue, rdData, changeRD, n
                     <h3>RD</h3>
                 </div>
                 <div className="RDInput_addData">
-                    <NumberInput data={rdData} changeValue={changeRD} placeholder={'0'} name={'rd'} value={rdValue} />
+                    <NumberInput
+                        data={rdData}
+                        changeValue={changeRD}
+                        placeholder={'0'}
+                        name={'rd'}
+                        value={rdValue}
+                        step={1}
+                    />
                 </div>
             </div>
             <div className="NA_addData">
@@ -24,7 +38,15 @@ function Calls_addData({ ktValue, ktData, changeKT, rdValue, rdData, changeRD, n
                     <h3>NA</h3>
                 </div>
                 <div className="NAInput_addData">
-                    <NumberInput data={naData} changeValue={changeNA} placeholder={'0'} name={'na'} maxValue={rdValue} value={naValue} />
+                    <NumberInput
+                        data={naData}
+                        changeValue={changeNA}
+                        placeholder={'0'}
+                        name={'na'}
+                        maxValue={rdValue}
+                        value={naValue}
+                        step={1}
+                    />
                 </div>
             </div>
         </div>

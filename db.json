@@ -50,7 +50,7 @@
             "na": 0,
             "sumcalls": 7,
             "duration": 11,
-            "zug": "Tagdienst",
+            "zug": "Tagd.",
             "car": "20-323",
             "tf": false
         },
@@ -734,7 +734,7 @@
             "na": 1,
             "sumcalls": 7,
             "duration": 12.5,
-            "zug": "Tagdienst",
+            "zug": "Tagd.",
             "car": "20-206",
             "tf": false
         },
@@ -1132,6 +1132,42 @@
             "duration": 8,
             "zug": "9",
             "car": "10-316",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63b21499d128dbd1952dc4f0"
+            },
+            "date": {
+                "$date": "2022-12-31T11:00:00Z"
+            },
+            "daytime": "Nacht",
+            "type": "KTW",
+            "kd": 2,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 4,
+            "duration": 13.5,
+            "zug": "5",
+            "car": "10-313",
+            "tf": true
+        },
+        {
+            "_id": {
+                "$oid": "63b214c2e195131d48944b3f"
+            },
+            "date": {
+                "$date": "2023-01-01T11:00:00Z"
+            },
+            "daytime": "Tag",
+            "type": "KTW",
+            "kd": 6,
+            "rd": 2,
+            "na": 0,
+            "sumcalls": 8,
+            "duration": 11,
+            "zug": "5",
+            "car": "10-313",
             "tf": true
         }
     ]

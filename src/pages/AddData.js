@@ -9,7 +9,6 @@ import Duration_addData from '../components/AddData/Duration_addData';
 import Zug_addData from '../components/AddData/Zug_addData';
 import Car_addData from '../components/AddData/Car_addData';
 import Transport_addData from '../components/AddData/Transport_addData';
-import Confirm_addData from '../components/AddData/Confirm_addData';
 
 function AddData({ data }) {
     const [date, changeDate] = useState(new Date());
@@ -43,7 +42,6 @@ function AddData({ data }) {
         car: car,
         tf: tf,
     };
-    console.log(jsonObj);
 
     const ktList = createUniqieList(data, 'kd');
     const rdList = createUniqieList(data, 'rd');
@@ -77,6 +75,7 @@ function AddData({ data }) {
                     type="submit"
                     onClick={async () => {
                         var errorList = [];
+                        toggleSubmit(true)
 
                         // Check date
                         if (typeof jsonObj.date.getMonth !== 'function') {
@@ -151,6 +150,7 @@ function AddData({ data }) {
 
                         if (errorList.length === 0) {
                             console.log('Lets Submit');
+                            console.log(jsonObj)
                             // return;
                             const response = await fetch(
                                 'https://dienststatistikbackend-production.up.railway.app/api/post',
@@ -166,9 +166,10 @@ function AddData({ data }) {
                                 console.error(error);
                             });
                             console.log(response);
+                            toggleSubmit(false)
                         } else {
                             window.alert(errorList.join('\r\n'));
-                            console.log(errorList);
+                            toggleSubmit(false)
                         }
                     }}
                     disabled={submiting}
@@ -188,14 +189,22 @@ function createUniqieList(data, key) {
         });
     }
 
-    const sortetList =
-        typeof unsortetList[0] === 'undefined'
-            ? []
-            : typeof unsortetList[0] === 'string'
-            ? [...new Set(unsortetList)].sort()
-            : [...new Set(unsortetList)].sort((a, b) => a - b);
+    const uniqueList = [...new Set(unsortetList)].sort();
+
+    const numbers = uniqueList.filter((element) => typeof element === 'number' || isNumeric(element) ).sort((a, b) => a-b)
+    const strings = uniqueList.filter((element) => typeof element !== 'number' && !isNumeric(element) ).sort();
+
+    const sortetList = numbers.concat(strings);
 
     return sortetList;
+}
+
+function isNumeric(str) {
+    if (typeof str != 'string') return false; // we only process strings!
+    return (
+        !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+        !isNaN(parseFloat(str))
+    ); // ...and ensure strings of whitespace fail
 }
 
 export default AddData;
