@@ -1,3 +1,5 @@
+<img src="public\favico.png" alt="logo" width="200" align="right">
+
 # [DienstStatistik](https://philroli.github.io/DienstStatistik/#/)
 
 Website to display various statistics regarding my volunteer work in the EMS field.
