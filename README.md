@@ -1,4 +1,4 @@
-<img src="public\favico.png" alt="logo" width="200" align="right">
+<img src="https://github.com/PhilRoli/DienstStatistik/blob/master/public/favicon.png" alt="logo" width="200" align="right">
 
 # [DienstStatistik](https://philroli.github.io/DienstStatistik/#/)
 
