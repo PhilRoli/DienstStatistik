@@ -5,10 +5,11 @@ function NumberInput({ data, changeValue, placeholder, name, maxValue, value }) 
                 type="number"
                 name={name}
                 placeholder={placeholder}
-                onChange={(e) => (e.target.value > maxValue ? changeValue(maxValue) : changeValue(parseInt(e.target.value)))}
+                onChange={(e) => (e.target.value > maxValue ? changeValue(maxValue) : changeValue(parseFloat(e.target.value)))}
                 list={`${name}List`}
                 max={maxValue}
                 min={0}
+                step={.5}
             />
             <datalist id={`${name}List`}>
                 {data.map((item, key) => (

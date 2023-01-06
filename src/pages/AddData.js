@@ -75,7 +75,7 @@ function AddData({ data }) {
             <div className="Confirm_addData">
                 <button
                     type="submit"
-                    onClick={() => {
+                    onClick={async () => {
                         var errorList = [];
 
                         // Check date
@@ -149,9 +149,27 @@ function AddData({ data }) {
                             changeTF(true);
                         }
 
-                        window.alert(errorList.join('\r\n'));
-
-                        console.log(errorList);
+                        if (errorList.length === 0) {
+                            console.log('Lets Submit');
+                            // return;
+                            const response = await fetch(
+                                'https://dienststatistikbackend-production.up.railway.app/api/post',
+                                {
+                                    method: 'POST',
+                                    body: JSON.stringify(jsonObj),
+                                    headers: {
+                                        Accept: 'application/json',
+                                        'Content-Type': 'application/json',
+                                    },
+                                }
+                            ).catch((error) => {
+                                console.error(error);
+                            });
+                            console.log(response);
+                        } else {
+                            window.alert(errorList.join('\r\n'));
+                            console.log(errorList);
+                        }
                     }}
                     disabled={submiting}
                 >
