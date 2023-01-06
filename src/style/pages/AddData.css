@@ -190,7 +190,7 @@
 .TypeKTW_addData > div {
     height: 100%;
     width: 75%;
-    margin: 0 auto;
+    margin: 0 0 auto 22px;
 }
 
 .TypeKTW_addData > div > button {
@@ -224,7 +224,7 @@
 .TypeAMB_addData > div {
     height: 100%;
     width: 75%;
-    margin: 0 auto;
+    margin: 0 0 auto 7px;
 }
 
 .TypeAMB_addData > div > button {
@@ -262,16 +262,25 @@
     gap: 0px 0px;
     grid-template-areas: 'KTText_addData KTInput_addData';
     grid-area: KT_addData;
-    border: inherit;
 }
 .KTText_addData {
     grid-area: KTText_addData;
-    border: inherit;
 }
 .KTInput_addData {
     grid-area: KTInput_addData;
-    border: inherit;
+    margin: auto;
+    width: 82.5%;
+    height: 75%;
 }
+.KTInput_addData > input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid grey;
+    background-color: rgb(17, 18, 23);
+}
+
 .RD_addData {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -279,16 +288,25 @@
     gap: 0px 0px;
     grid-template-areas: 'RDText_addData RDInput_addData';
     grid-area: RD_addData;
-    border: inherit;
 }
 .RDText_addData {
     grid-area: RDText_addData;
-    border: inherit;
 }
 .RDInput_addData {
     grid-area: RDInput_addData;
-    border: inherit;
+    margin: auto;
+    width: 82.5%;
+    height: 75%;
 }
+.RDInput_addData > input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid grey;
+    background-color: rgb(17, 18, 23);
+}
+
 .NA_addData {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -296,15 +314,23 @@
     gap: 0px 0px;
     grid-template-areas: 'NAText_addData NAInput_addData';
     grid-area: NA_addData;
-    border: inherit;
 }
 .NAText_addData {
     grid-area: NAText_addData;
-    border: inherit;
 }
 .NAInput_addData {
     grid-area: NAInput_addData;
-    border: inherit;
+    margin: auto;
+    width: 82.5%;
+    height: 75%;
+}
+.NAInput_addData > input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid grey;
+    background-color: rgb(17, 18, 23);
 }
 
 /*
@@ -331,12 +357,22 @@
 
 .DurationText_addData {
     grid-area: DurationText_addData;
-    border: inherit;
 }
 
 .DurationInput_addData {
     grid-area: DurationInput_addData;
-    border: inherit;
+    margin: auto;
+    width: 82.5%;
+    height: 75%;
+}
+
+.DurationInput_addData > input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid grey;
+    background-color: rgb(17, 18, 23);
 }
 
 /*
@@ -365,12 +401,23 @@
 
 .ZugText_addData {
     grid-area: ZugText_addData;
-    border: inherit;
 }
 
 .ZugInput_addData {
     grid-area: ZugInput_addData;
-    border: inherit;
+    justify-content: center;
+    margin: auto;
+    width: 82.5%;
+    height: 75%;
+}
+
+.ZugInput_addData > input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid grey;
+    background-color: rgb(17, 18, 23);
 }
 
 /*
@@ -397,12 +444,22 @@
 
 .CarText_addData {
     grid-area: CarText_addData;
-    border: inherit;
 }
 
 .CarInput_addData {
     grid-area: CarInput_addData;
-    border: inherit;
+    margin: auto;
+    width: 82.5%;
+    height: 75%;
+}
+
+.CarInput_addData > input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid grey;
+    background-color: rgb(17, 18, 23);
 }
 
 /*
@@ -431,7 +488,6 @@
 
 .TFText_addData {
     grid-area: TFText_addData;
-    border: inherit;
 }
 
 .TFInput_addData {
@@ -442,7 +498,6 @@
     grid-auto-flow: row;
     grid-template-areas: 'TFno_addData TFyes_addData';
     grid-area: TFInput_addData;
-    border: inherit;
 }
 
 .TFno_addData {
@@ -513,8 +568,19 @@
 */
 
 @media (max-width: 718px) {
-    .container_addData {
-        /* height: 630px; */
+    [class*='Input'] {
+        width: 188px;
+    }
+
+    [class*='Input'] > input {
+        width: 87.5%;
+    }
+
+    .TypeKTW_addData > div {
+        margin: 0 0 auto 12px;
+    }
+    .TypeAMB_addData > div {
+        margin: 0 0 auto 4px;
     }
 
     .DatumInput_addData > div > div {
@@ -523,5 +589,9 @@
 
     .container_addData > div > div > div > div > button {
         font-size: small;
+    }
+
+    .ZugInput_addData > div > div > button {
+        font-size: x-large !important;
     }
 }

@@ -51,7 +51,7 @@ function App() {
                     <Route path="/Timeline" element={<Timeline data={JSON.parse(JSON.stringify(dataPoints))} />} />
                     <Route path="/Erweitert" element={<Erweitert data={JSON.parse(JSON.stringify(dataPoints))} />} />
                     <Route path="/Graphs" element={<Graphs data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                    <Route path="/AddData" element={<AddData />} />
+                    <Route path="/AddData" element={<AddData data={dataPoints} />} />
                 </Routes>
             </div>
             <Footer />

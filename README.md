@@ -25,6 +25,9 @@ Also its in german.
 
 ## TODO
 
+- [ ] Redesign Zug to allow custom values
+- [ ] Fix AddData sort to sort 10 afer 9 not 1
+
 ### [Home](https://philroli.github.io/DienstStatistik/#/)
 
 Homepage duhh ... No clue what to put on there
