@@ -19,9 +19,10 @@ function AddData({ data }) {
     const [rd, changeRD] = useState(0);
     const [na, changeNA] = useState(0);
     const [duration, changeDuration] = useState(12);
-    const [zug, changeZug] = useState('5');
+    const [zug, changeZug] = useState('');
     const [car, changeCar] = useState('');
     const [tf, changeTF] = useState(true);
+    const [submiting, toggleSubmit] = useState(false);
     document.title = 'Dienst Hinzufügen';
 
     // Set clock to 0 for combatability
@@ -36,7 +37,7 @@ function AddData({ data }) {
         kd: kd,
         rd: rd,
         na: na,
-        sumcalls: kd + rd + na,
+        sumcalls: kd + rd,
         duration: duration,
         zug: zug,
         car: car,
@@ -69,14 +70,97 @@ function AddData({ data }) {
             />
             <Duration_addData changeValue={changeDuration} data={durationList} value={duration} />
             <Zug_addData value={zug} changeValue={changeZug} data={zugList} />
-            <Car_addData changeValue={changeCar} data={carList} />
+            <Car_addData changeValue={changeCar} data={carList} value={car} />
             <Transport_addData value={tf} changeTF={changeTF} />
-            <Confirm_addData />
+            <div className="Confirm_addData">
+                <button
+                    type="submit"
+                    onClick={() => {
+                        var errorList = [];
+
+                        // Check date
+                        if (typeof jsonObj.date.getMonth !== 'function') {
+                            errorList.push('Datum ist inkorrekt');
+                            changeDate(new Date());
+                        }
+
+                        // Check daytime
+                        if (
+                            typeof jsonObj.type !== 'string' ||
+                            (jsonObj.daytime !== 'Tag' && jsonObj.daytime !== 'Nacht') ||
+                            jsonObj.type === ''
+                        ) {
+                            errorList.push('Tageszeit ist inkorrekt');
+                            changeDaytime('Nacht');
+                        }
+
+                        // Check type
+                        if (
+                            typeof jsonObj.type !== 'string' ||
+                            (jsonObj.type !== 'KTW' && jsonObj.type !== 'RTW' && jsonObj.type !== 'AMB') ||
+                            jsonObj.daytime === ''
+                        ) {
+                            errorList.push('Typ ist inkorrekt');
+                            changeType('KTW');
+                        }
+
+                        // Check KT
+                        if (typeof jsonObj.kd !== 'number' || jsonObj.kd < 0) {
+                            errorList.push('KT ist inkorrekt');
+                            changeKD(0);
+                        }
+
+                        // Check RD
+                        if (typeof jsonObj.rd !== 'number' || jsonObj.rd < 0) {
+                            errorList.push('RD ist inkorrekt');
+                            changeRD(0);
+                        }
+
+                        // Check NA
+                        if (typeof jsonObj.na !== 'number' || jsonObj.na < 0 || jsonObj.na > jsonObj.rd) {
+                            errorList.push('NA ist inkorrekt');
+                            changeNA(0);
+                        }
+
+                        // Check duration
+                        if (typeof jsonObj.duration !== 'number' || jsonObj.duration < 0 || jsonObj.duration > 24) {
+                            errorList.push('Dienstzeit ist inkorrekt');
+                            changeDuration(12);
+                        }
+
+                        // Check zug
+                        if (typeof jsonObj.zug !== 'string' || jsonObj.zug === '') {
+                            errorList.push('Zug ist inkorrekt');
+                            changeZug('');
+                        }
+
+                        // Check car
+                        if (
+                            typeof jsonObj.car !== 'string' ||
+                            (/^\d{2}-\d{3}/gm.test(jsonObj.car) === false && jsonObj.car !== '')
+                        ) {
+                            errorList.push('Auto ist inkorrekt');
+                            changeCar('');
+                        }
+
+                        // Check tf
+                        if (typeof jsonObj.tf !== 'boolean' || (jsonObj.tf !== true && jsonObj.tf !== false)) {
+                            errorList.push('Tageszeit ist inkorrekt');
+                            changeTF(true);
+                        }
+
+                        window.alert(errorList.join('\r\n'));
+
+                        console.log(errorList);
+                    }}
+                    disabled={submiting}
+                >
+                    Confirm
+                </button>
+            </div>
         </div>
     );
 }
-
-export default AddData;
 
 function createUniqieList(data, key) {
     var unsortetList = [];
@@ -95,3 +179,5 @@ function createUniqieList(data, key) {
 
     return sortetList;
 }
+
+export default AddData;

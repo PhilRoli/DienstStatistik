@@ -550,6 +550,25 @@
     align-self: stretch;
     grid-area: Confirm_addData;
     border: inherit;
+    justify-content: center;
+    display: flex;
+}
+
+.Confirm_addData > button {
+    width: 75%;
+    height: 75%;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid grey;
+    background-color: rgb(29, 116, 18);
+    margin: auto;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.Confirm_addData > button:hover {
+    background-color: rgb(23, 91, 14);
 }
 
 .isActive {

@@ -1,5 +1,12 @@
-function Confirm_addData({ value, changeDate }) {
-    return <div className="Confirm_addData"></div>;
+function Confirm_addData({ json, checkData, toggleSubmit }) {
+    console.log(checkData())
+    return (
+        <div className="Confirm_addData">
+            <button type="submit" onClick={() => checkData()} disabled={toggleSubmit} >
+                Confirm
+            </button>
+        </div>
+    );
 }
 
 export default Confirm_addData;

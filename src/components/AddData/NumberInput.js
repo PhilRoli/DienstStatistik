@@ -5,7 +5,7 @@ function NumberInput({ data, changeValue, placeholder, name, maxValue, value }) 
                 type="number"
                 name={name}
                 placeholder={placeholder}
-                onChange={(e) => (e.target.value > maxValue ? changeValue(maxValue) : changeValue(e.target.value))}
+                onChange={(e) => (e.target.value > maxValue ? changeValue(maxValue) : changeValue(parseInt(e.target.value)))}
                 list={`${name}List`}
                 max={maxValue}
                 min={0}
