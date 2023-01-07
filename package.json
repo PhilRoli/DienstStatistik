@@ -26,6 +26,7 @@
         "react-scripts": "5.0.1",
         "react-time-range": "^1.0.4",
         "recharts": "^2.2.0",
+        "supertokens-auth-react": "^0.29.0",
         "web-vitals": "^2.1.4",
         "workbox-background-sync": "^6.5.4",
         "workbox-broadcast-update": "^6.5.4",

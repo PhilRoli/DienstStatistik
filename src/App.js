@@ -1,7 +1,12 @@
 // React
 import { Route, Routes } from 'react-router-dom';
+import * as reactRouterDom from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { trackPromise } from 'react-promise-tracker';
+// SuperTokens
+import SuperTokens, { SuperTokensWrapper, getSuperTokensRoutesForReactRouterDom } from 'supertokens-auth-react';
+import EmailPassword from 'supertokens-auth-react/recipe/emailpassword';
+import Session from 'supertokens-auth-react/recipe/session';
 // Components
 import Navbar from './components/Base/Navbar';
 import Favicon from './components/Base/Favicon';
@@ -58,27 +63,43 @@ function App() {
         trackPromise(loadCommit());
     }, []);
 
+    SuperTokens.init({
+        appInfo: {
+            // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
+            appName: 'dienststatistik',
+            apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
+            websiteDomain: 'http://localhost:3000',
+            apiBasePath: '/auth',
+            websiteBasePath: '/auth',
+        },
+        recipeList: [EmailPassword.init(), Session.init()],
+    });
+
     // Create deep copys for each page as to not change the data for other pages
     // source: https://stackoverflow.com/questions/47624142/right-way-to-clone-objects-arrays-during-setstate-in-react
     // JSON.parse(JSON.stringify(dataPoints))
 
     return (
-        <div className="App">
-            <Navbar />
-            <div className="pages">
-                <Routes>
-                    <Route path="/" element={<Home data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                    <Route path="/Statistik" element={<Statistik data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                    <Route path="/Daten" element={<Daten data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                    <Route path="/Timeline" element={<Timeline data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                    <Route path="/Erweitert" element={<Erweitert data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                    <Route path="/Graphs" element={<Graphs data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                    <Route path="/AddData" element={<AddData data={dataPoints} />} />
-                </Routes>
+        <SuperTokensWrapper>
+            <div className="App">
+                <Navbar />
+                <div className="pages">
+                    <Routes>
+                        {/*This renders the login UI on the /auth route*/}
+                        {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
+                        <Route path="/" element={<Home data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                        <Route path="/Statistik" element={<Statistik data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                        <Route path="/Daten" element={<Daten data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                        <Route path="/Timeline" element={<Timeline data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                        <Route path="/Erweitert" element={<Erweitert data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                        <Route path="/Graphs" element={<Graphs data={JSON.parse(JSON.stringify(dataPoints))} />} />
+                        <Route path="/AddData" element={<AddData data={dataPoints} />} />
+                    </Routes>
+                </div>
+                <Footer commitDate={commitDate} cached={window.navigator.onLine} />
+                <Favicon />
             </div>
-            <Footer commitDate={commitDate} cached={window.navigator.onLine} />
-            <Favicon />
-        </div>
+        </SuperTokensWrapper>
     );
 }
 
