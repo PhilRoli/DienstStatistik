@@ -2,10 +2,12 @@ import { VscGithub, VscTwitter } from 'react-icons/vsc';
 import { TiPlus } from 'react-icons/ti';
 import { FaAmbulance } from 'react-icons/fa';
 
-function Footer() {
+function Footer({commitDate}) {
+    const commitDateVar = new Date(commitDate)
+
     return (
         <footer>
-            <div className="copyright">Copyright © Philipp Rolinek 2022</div>
+            <div className="copyright">{`Copyright © Philipp Rolinek ${commitDateVar.getFullYear() + '-' + ('0' + (commitDateVar.getMonth()+1)).slice(-2) + '-' + ('0' + commitDateVar.getDate()).slice(-2)}`}</div>
             <div className="social">
                 <a
                     className="links"

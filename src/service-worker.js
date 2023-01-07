@@ -76,7 +76,7 @@ const cacheName = 'DienstStatistik';
 self.addEventListener('fetch', (event) => {
     console.log(event.request.mode);
     // Check if this is a navigation request
-    if (event.request.mode === 'navigate') {
+    if (event.request.mode === 'no-cors') {
         // Open the cache
         event.respondWith(
             caches.open(cacheName).then((cache) => {

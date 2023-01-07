@@ -16,6 +16,7 @@ import Timeline from './pages/Timeline';
 import AddData from './pages/AddData';
 
 function App() {
+    // Get data
     const [dataPoints, setDataPoints] = useState([]);
 
     const fetchData = async () => {
@@ -36,6 +37,27 @@ function App() {
         trackPromise(loadData());
     }, []);
 
+    // Get latest commit date
+    const [commitDate, setCommitDate] = useState();
+
+    const fetchCommit = async () => {
+        const response = await fetch('https://api.github.com/repos/PhilRoli/DienstStatistik/branches/gh-pages').catch(
+            (error) => {
+                console.log(error);
+            }
+        );
+        const comDate = await response.json();
+        return comDate.commit.commit.author.date;
+    };
+
+    useEffect(() => {
+        const loadCommit = async () => {
+            const comDateServer = await fetchCommit();
+            setCommitDate(comDateServer); 
+        };
+        trackPromise(loadCommit());
+    }, []);
+
     // Create deep copys for each page as to not change the data for other pages
     // source: https://stackoverflow.com/questions/47624142/right-way-to-clone-objects-arrays-during-setstate-in-react
     // JSON.parse(JSON.stringify(dataPoints))
@@ -54,7 +76,7 @@ function App() {
                     <Route path="/AddData" element={<AddData data={dataPoints} />} />
                 </Routes>
             </div>
-            <Footer />
+            <Footer commitDate={commitDate} />
             <Favicon />
         </div>
     );
