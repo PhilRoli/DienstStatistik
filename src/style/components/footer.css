@@ -2,19 +2,33 @@ footer {
     text-align: center;
     width: 100%;
     border-top: 1px solid white;
-    padding: 8px;
     font-size: small;
     order: 5;
     color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cached {
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
 }
 
 .copyright {
-    float: left;
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: flex-start;
 }
 
 .social {
-    float: right;
     text-decoration: none;
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: flex-end;
 }
 
 .links {

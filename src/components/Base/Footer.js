@@ -2,12 +2,13 @@ import { VscGithub, VscTwitter } from 'react-icons/vsc';
 import { TiPlus } from 'react-icons/ti';
 import { FaAmbulance } from 'react-icons/fa';
 
-function Footer({commitDate}) {
+function Footer({commitDate, cached}) {
     const commitDateVar = new Date(commitDate)
 
     return (
         <footer>
             <div className="copyright">{`Copyright © Philipp Rolinek ${commitDateVar.getFullYear() + '-' + ('0' + (commitDateVar.getMonth()+1)).slice(-2) + '-' + ('0' + commitDateVar.getDate()).slice(-2)}`}</div>
+            <div className='cached'>{!cached ? 'Cached Daten' : 'Live Daten'}</div>
             <div className="social">
                 <a
                     className="links"
@@ -50,7 +51,7 @@ function Footer({commitDate}) {
                     <FaAmbulance />
                 </a>
             </div>
-            <div style={{ clear: 'both' }}></div>
+            {/* <div style={{ clear: 'both' }}></div> */}
         </footer>
     );
 }

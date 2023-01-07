@@ -53,7 +53,7 @@ function App() {
     useEffect(() => {
         const loadCommit = async () => {
             const comDateServer = await fetchCommit();
-            setCommitDate(comDateServer); 
+            setCommitDate(comDateServer);
         };
         trackPromise(loadCommit());
     }, []);
@@ -76,7 +76,7 @@ function App() {
                     <Route path="/AddData" element={<AddData data={dataPoints} />} />
                 </Routes>
             </div>
-            <Footer commitDate={commitDate} />
+            <Footer commitDate={commitDate} cached={window.navigator.onLine} />
             <Favicon />
         </div>
     );

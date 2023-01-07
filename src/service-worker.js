@@ -74,12 +74,11 @@ self.addEventListener('message', (event) => {
 const cacheName = 'DienstStatistik';
 
 self.addEventListener('fetch', (event) => {
-    console.log('---------');
-    console.log(event.request.url);
-    console.log(event.request.mode);
-    console.log('---------');
     // Check if this is a navigation request
-    if (event.request.url === 'https://dienststatistikbackend-production.up.railway.app/api/getAll') {
+    if (
+        event.request.url === 'https://dienststatistikbackend-production.up.railway.app/api/getAll' ||
+        event.request.url === 'https://api.github.com/repos/PhilRoli/DienstStatistik/branches/gh-pages'
+    ) {
         // Open the cache
         event.respondWith(
             caches.open(cacheName).then((cache) => {
