@@ -21,7 +21,7 @@ function Home({ data }) {
 
     return (
         <>
-            <h1>Willkommen {'Philipp'} </h1>
+            <h1>Willkommen!</h1>
             <hr />
             <h3>
                 Tracking seit {diff.years === 1 ? diff.years + ' Jahr' : diff.years + ' Jahre'},{' '}

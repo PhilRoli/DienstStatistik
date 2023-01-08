@@ -7,6 +7,7 @@ import { trackPromise } from 'react-promise-tracker';
 import SuperTokens, { SuperTokensWrapper, getSuperTokensRoutesForReactRouterDom } from 'supertokens-auth-react';
 import EmailPassword from 'supertokens-auth-react/recipe/emailpassword';
 import Session from 'supertokens-auth-react/recipe/session';
+import { SessionAuth } from 'supertokens-auth-react/recipe/session';
 // Components
 import Navbar from './components/Base/Navbar';
 import Favicon from './components/Base/Favicon';
@@ -68,9 +69,9 @@ function App() {
             // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
             appName: 'dienststatistik',
             apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
-            websiteDomain: 'http://localhost:3000',
+            websiteDomain: 'https://philroli.github.io/',
             apiBasePath: '/auth',
-            websiteBasePath: '/auth',
+            websiteBasePath: '/DienstStatistik/#/auth',
         },
         recipeList: [EmailPassword.init(), Session.init()],
     });
@@ -87,13 +88,62 @@ function App() {
                     <Routes>
                         {/*This renders the login UI on the /auth route*/}
                         {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
-                        <Route path="/" element={<Home data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                        <Route path="/Statistik" element={<Statistik data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                        <Route path="/Daten" element={<Daten data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                        <Route path="/Timeline" element={<Timeline data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                        <Route path="/Erweitert" element={<Erweitert data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                        <Route path="/Graphs" element={<Graphs data={JSON.parse(JSON.stringify(dataPoints))} />} />
-                        <Route path="/AddData" element={<AddData data={dataPoints} />} />
+                        <Route
+                            path="/"
+                            element={
+                                <SessionAuth>
+                                    <Home data={JSON.parse(JSON.stringify(dataPoints))} />
+                                </SessionAuth>
+                            }
+                        />
+                        <Route
+                            path="/Statistik"
+                            element={
+                                <SessionAuth>
+                                    <Statistik data={JSON.parse(JSON.stringify(dataPoints))} />
+                                </SessionAuth>
+                            }
+                        />
+                        <Route
+                            path="/Daten"
+                            element={
+                                <SessionAuth>
+                                    <Daten data={JSON.parse(JSON.stringify(dataPoints))} />
+                                </SessionAuth>
+                            }
+                        />
+                        <Route
+                            path="/Timeline"
+                            element={
+                                <SessionAuth>
+                                    <Timeline data={JSON.parse(JSON.stringify(dataPoints))} />
+                                </SessionAuth>
+                            }
+                        />
+                        <Route
+                            path="/Erweitert"
+                            element={
+                                <SessionAuth>
+                                    <Erweitert data={JSON.parse(JSON.stringify(dataPoints))} />
+                                </SessionAuth>
+                            }
+                        />
+                        <Route
+                            path="/Graphs"
+                            element={
+                                <SessionAuth>
+                                    <Graphs data={JSON.parse(JSON.stringify(dataPoints))} />
+                                </SessionAuth>
+                            }
+                        />
+                        <Route
+                            path="/AddData"
+                            element={
+                                <SessionAuth>
+                                    <AddData data={dataPoints} />
+                                </SessionAuth>
+                            }
+                        />
                     </Routes>
                 </div>
                 <Footer commitDate={commitDate} cached={window.navigator.onLine} />
