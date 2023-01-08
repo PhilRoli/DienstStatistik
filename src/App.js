@@ -69,9 +69,9 @@ function App() {
             // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
             appName: 'dienststatistik',
             apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
-            websiteDomain: 'https://philroli.github.io/',
+            websiteDomain: 'https://philroli.github.io/DienstStatistik/#',
             apiBasePath: '/auth',
-            websiteBasePath: '/DienstStatistik/#/auth',
+            websiteBasePath: '/auth',
         },
         recipeList: [EmailPassword.init(), Session.init()],
     });
