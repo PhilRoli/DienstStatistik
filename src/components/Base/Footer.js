@@ -1,15 +1,32 @@
 import { VscGithub, VscTwitter } from 'react-icons/vsc';
 import { TiPlus } from 'react-icons/ti';
 import { FaAmbulance } from 'react-icons/fa';
+import { SiStatuspage } from 'react-icons/si';
 
-function Footer({commitDate, cached}) {
-    const commitDateVar = new Date(commitDate)
+function Footer({ commitDate, cached }) {
+    const commitDateVar = new Date(commitDate);
 
     return (
         <footer>
-            <div className="copyright">{`Copyright © Philipp Rolinek ${commitDateVar.getFullYear() + '-' + ('0' + (commitDateVar.getMonth()+1)).slice(-2) + '-' + ('0' + commitDateVar.getDate()).slice(-2)}`}</div>
-            <div className='cached'>{!cached ? 'Cached Daten' : 'Live Daten'}</div>
+            <div className="copyright">{`Copyright © Philipp Rolinek ${
+                commitDateVar.getFullYear() +
+                '-' +
+                ('0' + (commitDateVar.getMonth() + 1)).slice(-2) +
+                '-' +
+                ('0' + commitDateVar.getDate()).slice(-2)
+            }`}</div>
+            <div className="cached">{!cached ? 'Cached Daten' : 'Live Daten'}</div>
             <div className="social">
+                <a
+                    className="links"
+                    style={{}}
+                    href="https://dienststatistik.betteruptime.com/"
+                    target={'_blank'}
+                    rel="noreferrer"
+                    aria-label="Status Page"
+                >
+                    <SiStatuspage />
+                </a>
                 <a
                     className="links"
                     style={{}}
