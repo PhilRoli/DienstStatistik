@@ -71,9 +71,19 @@ function App() {
             apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
             websiteDomain: 'https://philroli.github.io',
             apiBasePath: '/auth',
-            websiteBasePath: '/DienstStatistik/auth',
+            websiteBasePath: '/auth',
         },
-        recipeList: [EmailPassword.init(), Session.init()],
+        recipeList: [
+            EmailPassword.init({
+                // The user will be taken to the custom path when they click on forgot password.
+                getRedirectionURL: async (context) => {
+                    if (context.action === 'RESET_PASSWORD') {
+                        return 'DienstStatistik/#/auth/reset-password';
+                    }
+                },
+            }),
+            Session.init(),
+        ],
     });
 
     // Create deep copys for each page as to not change the data for other pages
