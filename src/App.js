@@ -71,17 +71,19 @@ function App() {
             apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
             websiteDomain: 'https://philroli.github.io',
             apiBasePath: '/auth',
-            websiteBasePath: '/auth',
+            websiteBasePath: '/DienstStatistik/#/auth/',
         },
         recipeList: [
-            EmailPassword.init({
-                // The user will be taken to the custom path when they click on forgot password.
-                getRedirectionURL: async (context) => {
-                    if (context.action === 'RESET_PASSWORD') {
-                        return 'DienstStatistik/#/auth/reset-password';
-                    }
-                },
-            }),
+            EmailPassword.init(
+            //     {
+            //     // The user will be taken to the custom path when they click on forgot password.
+            //     getRedirectionURL: async (context) => {
+            //         if (context.action === 'RESET_PASSWORD') {
+            //             return '/reset-password';
+            //         }
+            //     },
+            // }
+            ),
             Session.init(),
         ],
     });
