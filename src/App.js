@@ -71,7 +71,7 @@ function App() {
             apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
             websiteDomain: 'https://philroli.github.io',
             apiBasePath: '/auth',
-            websiteBasePath: '/DienstStatistik/auth/',
+            websiteBasePath: '/auth',
         },
         recipeList: [
             EmailPassword.init(
