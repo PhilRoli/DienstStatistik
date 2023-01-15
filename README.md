@@ -30,6 +30,12 @@ Also its in german.
 - [ ] Redesign Zug to allow custom values
 - [x] Fix AddData sort to sort 10 afer 9 not 1
 - [ ] Implement Username storing and retriving
+- [ ] Add custom events (like certifications)
+- [ ] Add update / delete buttons on data page
+- [ ] Implement true live / cached data display
+- [ ] Implement popup for adddata page (success, error, etc.)
+- [ ] Implement user configs (fav zug, etc.)
+- [ ] Change Homepage on widescreens (?)
 
 ### [Home](https://philroli.github.io/DienstStatistik/#/)
 
@@ -80,20 +86,20 @@ Graphs, probably going to change some in the future
 
 ### [Timeline](https://philroli.github.io/DienstStatistik/#/Timeline)
 
-Timeline / Calender view with every day in service marked (haven't decided yet)
+Timeline / Calender view with every shift marked
 
-- [ ] Timeline einfügen
+- [x] Timeline einfügen
 
 ### [Dienst Hinzufügen](https://philroli.github.io/DienstStatistik/#/AddData)
 
-Add a data entry into the database **(WIP / Put on hold)**
+Add a data entry into the database
 
-- [ ] Funktion Implementieren
+- [x] Funktion Implementieren
 
 ### User Porfiles and LogIn Page
 
 Add Support for multiple Users and a login page
 
 - [ ] user profiles
-- [ ] login page
+- [x] login page
 - [ ] adapt database and api
