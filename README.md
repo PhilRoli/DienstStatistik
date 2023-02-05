@@ -28,7 +28,7 @@ Also its in german.
 ## TODO
 
 - [ ] Redesign Zug to allow custom values
-- [x] Fix AddData sort to sort 10 afer 9 not 1
+- [x] Fix AddData sort to sort 10 after 9 not 1
 - [ ] Implement Username storing and retriving
 - [ ] Add custom events (like certifications)
 - [ ] Add update / delete buttons on data page
