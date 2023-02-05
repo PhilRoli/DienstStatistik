@@ -36,6 +36,8 @@ Also its in german.
 - [ ] Implement popup for adddata page (success, error, etc.)
 - [ ] Implement user configs (fav zug, etc.)
 - [ ] Change Homepage on widescreens (?)
+- [ ] Change KTW / RTW Durchschnitt to TF Dienste
+- [ ] Transfer to custom doamin
 
 ### [Home](https://philroli.github.io/DienstStatistik/#/)
 

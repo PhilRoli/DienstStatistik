@@ -69,15 +69,12 @@ function App() {
             // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
             appName: 'dienststatistik',
             apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
-            websiteDomain: 'https://philroli.github.io',
+            websiteDomain: 'https://test.dienststatistik.at',
+            // websiteDomain: 'localhost:3000',
             apiBasePath: '/auth',
             websiteBasePath: '/auth',
         },
-        recipeList: [
-            EmailPassword.init(
-            ),
-            Session.init(),
-        ],
+        recipeList: [EmailPassword.init(), Session.init()],
     });
 
     // Create deep copys for each page as to not change the data for other pages
