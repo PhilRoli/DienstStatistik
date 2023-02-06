@@ -7,7 +7,7 @@ body {
 }
 
 .nav {
-    background-color: rgb(218, 37, 28);
+    background-color: rgb(28, 110, 218);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -35,11 +35,11 @@ body {
 }
 
 .nav li.active {
-    background-color: rgb(118, 37, 28);
+    background-color: rgb(28, 49, 118);
 }
 
 .nav li:hover {
-    background-color: rgb(177, 37, 28);
+    background-color: rgb(28, 78, 177);
 }
 
 @media (max-width: 664px) {
