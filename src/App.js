@@ -47,7 +47,7 @@ function App() {
     const [commitDate, setCommitDate] = useState();
 
     const fetchCommit = async () => {
-        const response = await fetch('https://api.github.com/repos/PhilRoli/DienstStatistik/branches/gh-pages').catch(
+        const response = await fetch('https://api.github.com/repos/PhilRoli/DienstStatistik/branches/development').catch(
             (error) => {
                 console.log(error);
             }
