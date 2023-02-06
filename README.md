@@ -2,6 +2,7 @@
 
 ## TODO
 
+- [ ] Fix URL Problem if possible
 - [ ] User configs
   - [ ] Allow custom fav. zug values
   - [ ] Implement username stroing
