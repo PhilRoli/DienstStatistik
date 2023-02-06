@@ -5,6 +5,8 @@ import Zug5Stats from '../components/Home/Zug5Stats';
 // import { useSessionContext } from 'supertokens-auth-react/recipe/session';
 
 function Home({ data }) {
+    console.log('Home Page was accesed');
+
     // SuperTokens Session
     // let session = useSessionContext();
     // if (session.loading) {

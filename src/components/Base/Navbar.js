@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <nav className="nav">
             <Link to="/" className="site-title">
-                RK Statistik
+                DEVELOPMENT
             </Link>
             <ul>
                 <CustomLink to="/Statistik">Statistik</CustomLink>
