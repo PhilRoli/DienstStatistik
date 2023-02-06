@@ -2,8 +2,19 @@ import HomeStats from '../components/Home/HomeStats';
 import moment from 'moment/moment';
 import HomeTable from '../components/Home/HomeTable';
 import Zug5Stats from '../components/Home/Zug5Stats';
+// import { useSessionContext } from 'supertokens-auth-react/recipe/session';
 
 function Home({ data }) {
+    // SuperTokens Session
+    // let session = useSessionContext();
+    // if (session.loading) {
+    //     return null;
+    // }
+    // let {handle, userId, accessTokenPayload} = session;
+    // console.log(handle)
+    // console.log(accessTokenPayload)
+    // console.log(userId)
+
     // Find earliest date
     // Create array with only dates from 'data', sort for earliest date
     const dateArray = data.map((value) => value.date);
