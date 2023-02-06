@@ -4,6 +4,7 @@ import HomeTable from '../components/Home/HomeTable';
 import Zug5Stats from '../components/Home/Zug5Stats';
 
 function Home({ data }) {
+    document.title = 'DienstStatistik';
     // Find earliest date
     // Create array with only dates from 'data', sort for earliest date
     const dateArray = data.map((value) => value.date);
