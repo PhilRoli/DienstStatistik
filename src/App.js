@@ -69,10 +69,10 @@ function App() {
             // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
             appName: 'dienststatistik',
             apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
-            websiteDomain: 'https://test.dienststatistik.at',
+            websiteDomain: 'https://www.dienststatistik.at',
             // websiteDomain: 'localhost:3000',
             apiBasePath: '/auth',
-            websiteBasePath: '/auth',
+            websiteBasePath: '/#/auth',
         },
         recipeList: [EmailPassword.init(), Session.init()],
     });
