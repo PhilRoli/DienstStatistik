@@ -72,7 +72,7 @@ function App() {
             websiteDomain: 'https://development.dienststatistik.at',
             // websiteDomain: 'localhost:3000',
             apiBasePath: '/auth',
-            websiteBasePath: '/#/auth',
+            websiteBasePath: '/auth',
         },
         recipeList: [EmailPassword.init(), Session.init()],
     });
