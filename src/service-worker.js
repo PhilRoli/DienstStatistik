@@ -76,7 +76,7 @@ const cacheName = 'DienstStatistik';
 self.addEventListener('fetch', (event) => {
     // Check if this is a navigation request
     if (
-        event.request.url === 'https://dienststatistikbackend-production.up.railway.app/api/getAll' ||
+        event.request.url === 'https://dienststatistikbackend-development.up.railway.app/api/getAll' ||
         event.request.url === 'https://api.github.com/repos/PhilRoli/DienstStatistik/branches/gh-pages'
     ) {
         // Open the cache

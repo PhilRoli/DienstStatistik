@@ -153,7 +153,7 @@ function AddData({ data }) {
                             console.log(jsonObj)
                             // return;
                             const response = await fetch(
-                                'https://dienststatistikbackend-production.up.railway.app/api/post',
+                                'https://dienststatistikbackend-development.up.railway.app/api/post',
                                 {
                                     method: 'POST',
                                     body: JSON.stringify(jsonObj),

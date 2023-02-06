@@ -1,7 +1,7 @@
 {
     "name": "dienststatistik",
     "version": "0.1.0",
-    "homepage": "https://www.test.dienststatistik.at/",
+    "homepage": "https://development.dienststatistik.at/",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",

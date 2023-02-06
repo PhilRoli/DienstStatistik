@@ -26,7 +26,7 @@ function App() {
     const [dataPoints, setDataPoints] = useState([]);
 
     const fetchData = async () => {
-        const response = await fetch('https://dienststatistikbackend-production.up.railway.app/api/getAll').catch(
+        const response = await fetch('https://dienststatistikbackend-development.up.railway.app/api/getAll').catch(
             (error) => {
                 console.error(error);
             }
@@ -68,8 +68,8 @@ function App() {
         appInfo: {
             // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
             appName: 'dienststatistik',
-            apiDomain: 'https://dienststatistikbackend-production.up.railway.app',
-            websiteDomain: 'https://www.dienststatistik.at',
+            apiDomain: 'https://dienststatistikbackend-development.up.railway.app',
+            websiteDomain: 'https://development.dienststatistik.at',
             // websiteDomain: 'localhost:3000',
             apiBasePath: '/auth',
             websiteBasePath: '/#/auth',
