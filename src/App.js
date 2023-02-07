@@ -75,25 +75,28 @@ function App() {
             websiteBasePath: '/auth',
         },
         recipeList: [
-            EmailPassword.init({
-                signInAndUpFeature: {
-                    signUpForm: {
-                        formFields: [
-                            {
-                                id: 'name',
-                                label: 'Vorname',
-                                placeholder: 'Dein Vorname',
-                                optional: true,
-                            },
-                            {
-                                id: 'zugAssoc',
-                                label: 'Dein Zug',
-                                placeholder: 'Nur die Zahl z.B: 12',
-                            },
-                        ],
-                    },
-                },
-            }),
+            EmailPassword
+                .init
+                //     {
+                //     signInAndUpFeature: {
+                //         signUpForm: {
+                //             formFields: [
+                //                 {
+                //                     id: 'name',
+                //                     label: 'Vorname',
+                //                     placeholder: 'Dein Vorname',
+                //                     optional: true,
+                //                 },
+                //                 {
+                //                     id: 'zugAssoc',
+                //                     label: 'Dein Zug',
+                //                     placeholder: 'Nur die Zahl z.B: 12',
+                //                 },
+                //             ],
+                //         },
+                //     },
+                // }
+                (),
             Session.init(),
         ],
     });
