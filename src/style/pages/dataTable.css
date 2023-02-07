@@ -51,6 +51,12 @@
     }
 
     /* Hide delete under 590px */
+    .deleteData_header {
+        display: none;
+    }
+    .deleteData {
+        display: none;
+    }
 
     .dienst_table > .dienst_header > tr > .datum_header {
         width: 25%;

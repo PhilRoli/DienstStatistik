@@ -97,7 +97,7 @@ function Daten({ data }) {
 
                 <table className="dienst_table">
                     <thead className="dienst_header">
-                        <tr>
+                        <tr key={'dataTable_head'}>
                             <th className="datum_header fifteen">Datum</th>
                             <th className="daytime_header ten">Tageszeit</th>
                             <th className="type_header five">Typ</th>
@@ -115,8 +115,8 @@ function Daten({ data }) {
                     <tbody>
                         {filteredData.map((dataPoint) => (
                             <>
-                                <Dienst key={dataPoint._id['$oid']} datenPunkt={dataPoint} />
-                                <tr className="spacerRow" style={{ height: '5px' }} />
+                                <Dienst key={dataPoint._id} datenPunkt={dataPoint} />
+                                <tr className="spacerRow" style={{ height: '5px' }} key={`spacer_${dataPoint._id}`} />
                             </>
                         ))}
                     </tbody>
