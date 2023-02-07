@@ -149,9 +149,6 @@ function AddData({ data }) {
                         }
 
                         if (errorList.length === 0) {
-                            console.log('Lets Submit');
-                            console.log(jsonObj);
-                            // return;
                             const response = await fetch(
                                 'https://dienststatistikbackend-development.up.railway.app/api/post',
                                 {
