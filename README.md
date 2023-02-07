@@ -1,5 +1,7 @@
 # DEVELOPMENT BRANCH
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06de055f-9dcd-46f4-b31f-f0585b57243f/deploy-status)](https://app.netlify.com/sites/singular-profiterole-ed3f50/deploys)
+
 ## TODO
 
 - [x] Fix URL Problem if possible
