@@ -24,7 +24,7 @@ function HomeTable({ data }) {
                         <th className="tf_header twenty">Transportführer</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="home_body">
                     {sortet.map((dataPoint) => (
                         <>
                             <Dienst key={`homeTable_data_${dataPoint['_id']}`} datenPunkt={dataPoint} />

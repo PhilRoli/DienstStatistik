@@ -77,6 +77,7 @@ function App() {
         recipeList: [
             EmailPassword
                 .init
+                // TODO: Maybe find a fix
                 //     {
                 //     signInAndUpFeature: {
                 //         signUpForm: {
@@ -94,6 +95,22 @@ function App() {
                 //                 },
                 //             ],
                 //         },
+                //     },
+                // }
+                // TODO: Add SignUp DB creation
+                // {
+                //     onHandleEvent: async (context) => {
+                //         if (context.action === 'SESSION_ALREADY_EXISTS') {
+                //             // TODO:
+                //         } else {
+                //             if (context.action === 'SUCCESS') {
+                //                 if (context.isNewUser) {
+                //                     // TODO: Sign up
+                //                 } else {
+                //                     // TODO: Sign in
+                //                 }
+                //             }
+                //         }
                 //     },
                 // }
                 (),

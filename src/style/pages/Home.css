@@ -23,6 +23,11 @@
     width: 20%;
 }
 
+.home_head > tr > .deleteData_header,
+.home_body > tr > .deleteData > div > button {
+    display: none;
+}
+
 @media (max-width: 755px) {
     .home_table {
         min-width: 0px;
