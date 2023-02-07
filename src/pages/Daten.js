@@ -109,6 +109,7 @@ function Daten({ data }) {
                             <th className="zug_header five">Zug</th>
                             <th className="car_header ten">Auto</th>
                             <th className="tf_header twenty">Transportführer</th>
+                            <th className="deleteData_header ten">Löschen</th>
                         </tr>
                     </thead>
                     <tbody>
