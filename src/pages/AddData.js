@@ -75,7 +75,7 @@ function AddData({ data }) {
                     type="submit"
                     onClick={async () => {
                         var errorList = [];
-                        toggleSubmit(true)
+                        toggleSubmit(true);
 
                         // Check date
                         if (typeof jsonObj.date.getMonth !== 'function') {
@@ -150,7 +150,7 @@ function AddData({ data }) {
 
                         if (errorList.length === 0) {
                             console.log('Lets Submit');
-                            console.log(jsonObj)
+                            console.log(jsonObj);
                             // return;
                             const response = await fetch(
                                 'https://dienststatistikbackend-development.up.railway.app/api/post',
@@ -165,11 +165,13 @@ function AddData({ data }) {
                             ).catch((error) => {
                                 console.error(error);
                             });
-                            console.log(response);
-                            toggleSubmit(false)
+                            response.status === 200
+                                ? window.alert('Dienst wurde erfolgreich hinzugefügt')
+                                : window.alert(`Status ${response.status}`);
+                            toggleSubmit(false);
                         } else {
                             window.alert(errorList.join('\r\n'));
-                            toggleSubmit(false)
+                            toggleSubmit(false);
                         }
                     }}
                     disabled={submiting}
@@ -191,8 +193,8 @@ function createUniqieList(data, key) {
 
     const uniqueList = [...new Set(unsortetList)].sort();
 
-    const numbers = uniqueList.filter((element) => typeof element === 'number' || isNumeric(element) ).sort((a, b) => a-b)
-    const strings = uniqueList.filter((element) => typeof element !== 'number' && !isNumeric(element) ).sort();
+    const numbers = uniqueList.filter((element) => typeof element === 'number' || isNumeric(element)).sort((a, b) => a - b);
+    const strings = uniqueList.filter((element) => typeof element !== 'number' && !isNumeric(element)).sort();
 
     const sortetList = numbers.concat(strings);
 
