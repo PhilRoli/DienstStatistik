@@ -63,7 +63,7 @@ function Footer({ commitDate, cached }) {
                     href="https://diversys.at/"
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Dienstverfaltungssystem"
+                    aria-label="Dienstverwaltungssystem"
                 >
                     <FaAmbulance />
                 </a>
