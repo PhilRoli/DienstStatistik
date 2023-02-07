@@ -104,8 +104,8 @@ function Daten({ data }) {
                             <th className="kd_header five">KT</th>
                             <th className="rd_header five">RD</th>
                             <th className="na_header five">NA</th>
-                            <th className="sumcalls_header ten">Summe</th>
-                            <th className="duration_header ten">Zeit</th>
+                            <th className="sumcalls_header five">Summe</th>
+                            <th className="duration_header five">Zeit</th>
                             <th className="zug_header five">Zug</th>
                             <th className="car_header ten">Auto</th>
                             <th className="tf_header twenty">Transportführer</th>
