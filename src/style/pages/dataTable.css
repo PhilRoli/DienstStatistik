@@ -50,6 +50,8 @@
         display: none;
     }
 
+    /* Hide delete under 590px */
+
     .dienst_table > .dienst_header > tr > .datum_header {
         width: 25%;
     }

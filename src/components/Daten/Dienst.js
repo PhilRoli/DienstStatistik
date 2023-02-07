@@ -60,6 +60,7 @@ function Dienst({ datenPunkt }) {
             >
                 {datenPunkt.tf ? 'Ja' : 'Nein'}
             </td>
+            <td className="deleteData">Löschen</td>
         </tr>
     );
 }
