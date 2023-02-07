@@ -16,3 +16,29 @@
     border-radius: 3px;
     box-shadow: none;
 }
+
+.deleteData {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+.deleteDataButtonDiv {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.deleteDataButton {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+
+    cursor: pointer;
+}

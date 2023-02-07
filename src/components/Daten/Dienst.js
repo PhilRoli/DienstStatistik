@@ -8,9 +8,10 @@ function Dienst({ datenPunkt }) {
     const datum = `${year}-${month}-${day}`;
 
     const [isActive, setActive] = useState(false);
+    const [deleting, toggleDeleting] = useState(false);
 
     return (
-        <tr className={isActive ? 'active_dienst' : 'dienst'} onClick={() => setActive(!isActive)}>
+        <tr className={isActive ? 'active_dienst' : 'dienst'} onClick={() => setActive(!isActive)} key={datenPunkt._id}>
             <td className="datum">{datum}</td>
             <td
                 className="daytime"
@@ -59,6 +60,40 @@ function Dienst({ datenPunkt }) {
                 }}
             >
                 {datenPunkt.tf ? 'Ja' : 'Nein'}
+            </td>
+            <td className="deleteData">
+                <div className="deleteDataButtonDiv">
+                    <button
+                        className="deleteDataButton"
+                        onClick={async () => {
+                            toggleDeleting(true);
+                            if (window.confirm('Willst du diesen Dateneintrag wirklich löschen?') === true) {
+                                const response = await fetch(
+                                    `https://dienststatistikbackend-development.up.railway.app/api/delete/${datenPunkt._id}`,
+                                    {
+                                        method: 'DELETE',
+                                        headers: {
+                                            Accept: 'application/json',
+                                            'Content-Type': 'application/json',
+                                        },
+                                    }
+                                ).catch((error) => {
+                                    console.error(error);
+                                });
+                                response.status === 200
+                                    ? window.alert('Dateneintrag wurde erfolgreich gelöscht')
+                                    : window.alert(`Status ${response.status}`);
+                                toggleDeleting(false);
+                            } else {
+                                console.log('canceled');
+                                toggleDeleting(false);
+                            }
+                        }}
+                        disabled={deleting}
+                    >
+                        Löschen
+                    </button>
+                </div>
             </td>
         </tr>
     );
