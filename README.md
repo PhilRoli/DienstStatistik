@@ -16,3 +16,7 @@
 ## TODOs with consideration
 
 - [ ] Make Homepage smaller on wide screens
+
+## Feauture Request
+
+- [ ] Anzahl Fehlfahrten / Bagadel
